@@ -1,0 +1,194 @@
+2016/3/18 9:08:19: OMCS initialization complete -- OMCS server Address : 127.0.0.1:4534 ，UserID ： 3335 。
+
+2016/3/18 9:08:33: Guest request device connection -- GuestID : 3335 , DeviceType : Camera , ConnectResult : Succeed
+
+2016/3/18 9:08:34: MultimediaConnector Connect Ended -- OwnerID : 3335 , DeviceType : Camera , ConnectResult : Succeed
+
+2016/3/18 9:11:16: Guest request device connection -- GuestID : 3335 , DeviceType : Microphone , ConnectResult : Succeed
+
+2016/3/18 9:11:16: MultimediaConnector Connect Ended -- OwnerID : 3335 , DeviceType : Microphone , ConnectResult : Succeed
+
+2016/3/18 9:14:41: MultimediaConnector Disconnected -- OwnerID : 3335 , DeviceType : Microphone , DisconnectedType : GuestActiveDisconnect
+
+2016/3/18 9:14:41: MultimediaConnector Disconnected -- OwnerID : 3335 , DeviceType : Camera , DisconnectedType : GuestActiveDisconnect
+
+2016/3/18 11:34:23: OMCS initialization complete -- OMCS server Address : 127.0.0.1:4534 ，UserID ： 3276 。
+
+2016/3/20 18:46:38: OMCS initialization complete -- OMCS server Address : 127.0.0.1:4534 ，UserID ： 3828 。
+
+2016/3/20 18:46:52: Guest request device connection -- GuestID : 3828 , DeviceType : Microphone , ConnectResult : Succeed
+
+2016/3/20 18:46:52: MultimediaConnector Connect Ended -- OwnerID : 3828 , DeviceType : Microphone , ConnectResult : Succeed
+
+2016/3/20 18:46:53: Guest request device connection -- GuestID : 3828 , DeviceType : Camera , ConnectResult : Succeed
+
+2016/3/20 18:46:54: MultimediaConnector Connect Ended -- OwnerID : 3828 , DeviceType : Camera , ConnectResult : Succeed
+
+2016/3/20 18:46:58: MultimediaConnector Disconnected -- OwnerID : 3828 , DeviceType : Microphone , DisconnectedType : GuestActiveDisconnect
+
+2016/3/20 18:46:58: MultimediaConnector Disconnected -- OwnerID : 3828 , DeviceType : Camera , DisconnectedType : GuestActiveDisconnect
+
+2016/7/13 14:10:45: OMCS initialization complete -- OMCS server Address : 127.0.0.1:4534 ，UserID ： 3883 。
+
+2016/7/13 14:10:58: Guest request device connection -- GuestID : 3883 , DeviceType : Camera , ConnectResult : Succeed
+
+2016/7/13 14:10:59: MultimediaConnector Connect Ended -- OwnerID : 3883 , DeviceType : Camera , ConnectResult : Succeed
+
+2016/7/13 14:11:38: OMCS Connection Interrupted -- OMCS server Address : 127.0.0.1:4534  ，UserID ： 3883 。
+
+2016/7/13 14:11:38: MultimediaConnector Disconnected -- OwnerID : 3883 , DeviceType : Camera , DisconnectedType : GuestOffline
+
+2016/7/13 14:11:55: Guest request device connection -- GuestID : 3883 , DeviceType : Microphone , ConnectResult : Succeed
+
+2016/7/13 14:11:55: MultimediaConnector Connect Ended -- OwnerID : 3883 , DeviceType : Microphone , ConnectResult : Succeed
+
+2016/7/13 14:11:56: MultimediaConnector Disconnected -- OwnerID : 3883 , DeviceType : Microphone , DisconnectedType : GuestActiveDisconnect
+
+2016/8/9 15:41:26: OMCS initialization complete -- OMCS server Address : 127.0.0.1:4534 ，UserID ： 3244 。
+
+2016/8/9 15:41:39: Guest request device connection -- GuestID : 3244 , DeviceType : Camera , ConnectResult : Succeed
+
+2016/8/9 15:41:40: MultimediaConnector Connect Ended -- OwnerID : 3244 , DeviceType : Camera , ConnectResult : Succeed
+
+2016/8/9 15:42:28: Guest request device connection -- GuestID : 3244 , DeviceType : Microphone , ConnectResult : Succeed
+
+2016/8/9 15:42:28: MultimediaConnector Connect Ended -- OwnerID : 3244 , DeviceType : Microphone , ConnectResult : Succeed
+
+2016/8/9 15:42:28: MultimediaConnector Disconnected -- OwnerID : 3244 , DeviceType : Microphone , DisconnectedType : GuestActiveDisconnect
+
+2016/8/9 15:42:28: MultimediaConnector Disconnected -- OwnerID : 3244 , DeviceType : Camera , DisconnectedType : GuestActiveDisconnect
+
+2016/12/1 16:20:56: OMCS initialization complete -- OMCS server Address : 127.0.0.1:4534 ，UserID ： 4183 。
+
+2016/12/1 16:21:06: Guest request device connection -- GuestID : 4183 , DeviceType : Camera , ConnectResult : Succeed
+
+2016/12/1 16:21:07: MultimediaConnector Connect Ended -- OwnerID : 4183 , DeviceType : Camera , ConnectResult : Succeed
+
+2016/12/1 16:21:27: OMCS Connection Interrupted -- OMCS server Address : 127.0.0.1:4534  ，UserID ： 4183 。
+
+2016/12/1 16:21:27: MultimediaConnector Disconnected -- OwnerID : 4183 , DeviceType : Camera , DisconnectedType : GuestOffline
+
+2016/12/2 9:26:02: OMCS initialization complete -- OMCS server Address : 127.0.0.1:4534 ，UserID ： 1324 。
+
+2016/12/2 9:26:17: Guest request device connection -- GuestID : 1324 , DeviceType : Camera , ConnectResult : Succeed
+
+2016/12/2 9:26:18: MultimediaConnector Connect Ended -- OwnerID : 1324 , DeviceType : Camera , ConnectResult : Succeed
+
+2016/12/2 9:27:10: Guest request device connection -- GuestID : 1324 , DeviceType : Microphone , ConnectResult : Succeed
+
+2016/12/2 9:27:10: MultimediaConnector Connect Ended -- OwnerID : 1324 , DeviceType : Microphone , ConnectResult : Succeed
+
+2016/12/2 9:29:26: MultimediaConnector Disconnected -- OwnerID : 1324 , DeviceType : Microphone , DisconnectedType : GuestActiveDisconnect
+
+2016/12/2 9:29:26: MultimediaConnector Disconnected -- OwnerID : 1324 , DeviceType : Camera , DisconnectedType : GuestActiveDisconnect
+
+2016/12/2 9:39:05: OMCS initialization complete -- OMCS server Address : 127.0.0.1:4534 ，UserID ： 5879 。
+
+2016/12/2 9:39:19: Guest request device connection -- GuestID : 5879 , DeviceType : Camera , ConnectResult : Succeed
+
+2016/12/2 9:39:20: Guest request device connection -- GuestID : 5879 , DeviceType : Microphone , ConnectResult : Succeed
+
+2016/12/2 9:39:20: MultimediaConnector Connect Ended -- OwnerID : 5879 , DeviceType : Camera , ConnectResult : Succeed
+
+2016/12/2 9:39:21: MultimediaConnector Connect Ended -- OwnerID : 5879 , DeviceType : Microphone , ConnectResult : Succeed
+
+2016/12/2 9:39:35: MultimediaConnector Disconnected -- OwnerID : 5879 , DeviceType : Microphone , DisconnectedType : GuestActiveDisconnect
+
+2016/12/2 9:39:35: MultimediaConnector Disconnected -- OwnerID : 5879 , DeviceType : Camera , DisconnectedType : GuestActiveDisconnect
+
+2017/8/18 9:37:25: OMCS initialization complete -- OMCS server Address : 127.0.0.1:4534 ，UserID ： 7896 。
+
+2017/8/21 11:45:08: OMCS initialization complete -- OMCS server Address : 192.168.132.190:4534 ，UserID ： 6351 。
+
+2017/8/22 19:49:15: OMCS initialization complete -- OMCS server Address : 192.168.132.190:4534 ，UserID ： 21313122 。
+
+2017/8/23 11:20:32: OMCS initialization complete -- OMCS server Address : 192.168.132.190:4534 ，UserID ： 201010001 。
+
+2017/8/23 11:29:53: OMCS initialization complete -- OMCS server Address : 192.168.132.190:4534 ，UserID ： 201010001 。
+
+2017/8/23 11:30:07: Guest request device connection -- GuestID : 201010001 , DeviceType : Microphone , ConnectResult : Succeed
+
+2017/8/23 11:30:07: Guest request device connection -- GuestID : 201010001 , DeviceType : Camera , ConnectResult : Succeed
+
+2017/8/23 11:30:07: MultimediaConnector Connect Ended -- OwnerID : 201010001 , DeviceType : Microphone , ConnectResult : Succeed
+
+2017/8/23 11:30:07: MultimediaConnector Connect Ended -- OwnerID : 201010001 , DeviceType : Camera , ConnectResult : Succeed
+
+2017/8/23 11:30:07: MultimediaConnector Disconnected -- OwnerID : 201010001 , DeviceType : Microphone , DisconnectedType : GuestActiveDisconnect
+
+2017/8/23 11:30:07: MultimediaConnector Disconnected -- OwnerID : 201010001 , DeviceType : Camera , DisconnectedType : GuestActiveDisconnect
+
+2017/8/23 11:30:41: OMCS initialization complete -- OMCS server Address : 192.168.132.190:4534 ，UserID ： 201010001 。
+
+2017/8/23 11:30:54: Guest request device connection -- GuestID : 201010001 , DeviceType : Microphone , ConnectResult : Succeed
+
+2017/8/23 11:30:55: Guest request device connection -- GuestID : 201010001 , DeviceType : Camera , ConnectResult : Succeed
+
+2017/8/23 11:30:55: MultimediaConnector Connect Ended -- OwnerID : 201010001 , DeviceType : Microphone , ConnectResult : Succeed
+
+2017/8/23 11:30:56: MultimediaConnector Connect Ended -- OwnerID : 201010001 , DeviceType : Camera , ConnectResult : Succeed
+
+2017/8/23 11:31:00: MultimediaConnector Disconnected -- OwnerID : 201010001 , DeviceType : Microphone , DisconnectedType : GuestActiveDisconnect
+
+2017/8/23 11:31:01: MultimediaConnector Disconnected -- OwnerID : 201010001 , DeviceType : Camera , DisconnectedType : GuestActiveDisconnect
+
+2017/8/23 11:40:20: OMCS initialization complete -- OMCS server Address : 192.168.132.190:4534 ，UserID ： 201010001 。
+
+2017/8/23 14:59:48: OMCS initialization complete -- OMCS server Address : 192.168.132.190:4534 ，UserID ： 201010001 。
+
+2017/8/23 18:05:06: OMCS initialization complete -- OMCS server Address : 192.168.132.190:4534 ，UserID ： 201010001 。
+
+2017/8/23 19:18:59: OMCS initialization complete -- OMCS server Address : 192.168.132.190:4534 ，UserID ： 201010001 。
+
+2017/8/23 20:23:59: OMCS initialization complete -- OMCS server Address : 192.168.132.190:4534 ，UserID ： 201010001 。
+
+2017/8/23 20:24:06: Guest request device connection -- GuestID : 201010001 , DeviceType : Microphone , ConnectResult : Succeed
+
+2017/8/23 20:24:07: Guest request device connection -- GuestID : 201010001 , DeviceType : Camera , ConnectResult : Succeed
+
+2017/8/23 20:24:07: MultimediaConnector Connect Ended -- OwnerID : 201010001 , DeviceType : Microphone , ConnectResult : Succeed
+
+2017/8/23 20:24:07: MultimediaConnector Connect Ended -- OwnerID : 201010001 , DeviceType : Camera , ConnectResult : Succeed
+
+2017/8/23 20:24:07: MultimediaConnector Disconnected -- OwnerID : 201010001 , DeviceType : Microphone , DisconnectedType : GuestActiveDisconnect
+
+2017/8/23 20:24:07: MultimediaConnector Disconnected -- OwnerID : 201010001 , DeviceType : Camera , DisconnectedType : GuestActiveDisconnect
+
+2017/8/23 20:44:50: OMCS initialization complete -- OMCS server Address : 192.168.132.190:4534 ，UserID ： 201010001 。
+
+2017/8/24 9:51:40: OMCS initialization complete -- OMCS server Address : 192.168.132.190:4534 ，UserID ： 201010001 。
+
+2017/8/24 10:25:20: OMCS initialization complete -- OMCS server Address : 192.168.132.190:4534 ，UserID ： 201010001 。
+
+2017/8/24 11:45:25: OMCS initialization complete -- OMCS server Address : 192.168.132.190:4534 ，UserID ： 201010001 。
+
+2017/8/24 11:45:46: Guest request device connection -- GuestID : 201010001 , DeviceType : Microphone , ConnectResult : Succeed
+
+2017/8/24 11:45:47: Guest request device connection -- GuestID : 201010001 , DeviceType : Camera , ConnectResult : Succeed
+
+2017/8/24 11:45:47: MultimediaConnector Connect Ended -- OwnerID : 201010001 , DeviceType : Microphone , ConnectResult : Succeed
+
+2017/8/24 11:45:49: MultimediaConnector Connect Ended -- OwnerID : 201010001 , DeviceType : Camera , ConnectResult : Succeed
+
+2017/8/24 11:48:38: MultimediaConnector Disconnected -- OwnerID : 201010001 , DeviceType : Microphone , DisconnectedType : GuestActiveDisconnect
+
+2017/8/24 11:48:38: MultimediaConnector Disconnected -- OwnerID : 201010001 , DeviceType : Camera , DisconnectedType : GuestActiveDisconnect
+
+2017/8/24 18:46:15: OMCS initialization complete -- OMCS server Address : 192.168.132.190:4534 ，UserID ： 201010001 。
+
+2017/8/24 18:46:29: Guest request device connection -- GuestID : 201010001 , DeviceType : Microphone , ConnectResult : Succeed
+
+2017/8/24 18:46:29: MultimediaConnector Connect Ended -- OwnerID : 201010001 , DeviceType : Microphone , ConnectResult : Succeed
+
+2017/8/24 18:46:29: Guest request device connection -- GuestID : 201010001 , DeviceType : Camera , ConnectResult : Succeed
+
+2017/8/24 18:46:30: MultimediaConnector Connect Ended -- OwnerID : 201010001 , DeviceType : Camera , ConnectResult : Succeed
+
+2017/8/24 18:49:41: MultimediaConnector Disconnected -- OwnerID : 201010001 , DeviceType : Microphone , DisconnectedType : GuestActiveDisconnect
+
+2017/8/24 18:49:41: MultimediaConnector Disconnected -- OwnerID : 201010001 , DeviceType : Camera , DisconnectedType : GuestActiveDisconnect
+
+2017/8/24 20:43:48:Camera's origin output format [47504a4d-0000-0010-8000-00aa00389b71] is not supported ! The target camera index is 0. 
+
+2017/8/24 20:43:48: OMCS initialization complete -- OMCS server Address : 192.168.132.236:4534 ，UserID ： 201420001 。
+

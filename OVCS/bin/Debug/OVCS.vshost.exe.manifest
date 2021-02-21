@@ -1,0 +1,2733 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="OVCS.exe" version="1.0.0.24" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:iconFile="32.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="OVCS" version="1.7.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="OVCS.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC 清单选项
+          如果要更改 Windows 用户帐户控制级别，请用以下节点之一替换
+          requestedExecutionLevel 节点。
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+          如果要利用文件和注册表虚拟化提供
+          向后兼容性，请删除 requestedExecutionLevel 节点。
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CSkin.dll" size="1005056">
+      <assemblyIdentity name="CSkin" version="12.8.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>5ACpsNmvTbqwHzEJ4+PaS65WnEk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CUST.DBClass.dll" size="20480">
+      <assemblyIdentity name="CUST.DBClass" version="1.0.3517.24514" language="neutral" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Y1mW8fQu1Wlr+1HUq3aGrx/Eexk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CUST.EMException.dll" size="20480">
+      <assemblyIdentity name="CUST.EMException" version="1.0.5071.34996" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>xooWx0ah1cQirhSUKkU5AoyQ5dI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CUST.Tools.dll" size="24576">
+      <assemblyIdentity name="CUST.Tools" version="1.0.3619.23820" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>IaBzyZB3W9jB1tBKUgCZwHBtQd8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ESBasic.dll" size="422400">
+      <assemblyIdentity name="ESBasic" version="2.0.0.0" publicKeyToken="BA1538489F75683E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>g6XQFtfK2YvY+jn0xIJi9/0CzIs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ESFramework.dll" size="1129472">
+      <assemblyIdentity name="ESFramework" version="6.2.0.0" publicKeyToken="BA1538489F75683E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>muBRhcZ5mDrjrljul5O590w7z9k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ESFramework.Boost.dll" size="464384">
+      <assemblyIdentity name="ESFramework.Boost" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>n3Zyzzg5pCrugZVtXdm07+0ycCg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OMCS.dll" size="2320896">
+      <assemblyIdentity name="OMCS" version="4.5.0.0" publicKeyToken="BA1538489F75683E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>M16FA9bmXaN6MYp3/DFhTHJHetk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OMCS.Boost.dll" size="328704">
+      <assemblyIdentity name="OMCS.Boost" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>onIkx35v6twr8B6XVfvhvg1dwZg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OVCS.exe" size="144384">
+      <assemblyIdentity name="OVCS" version="1.7.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>LuIe63J3mxLHXlAY1CtyYDfaeVo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OVCS.Core.dll" size="4096">
+      <assemblyIdentity name="OVCS.Core" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Qn9gOtRQKuZVcL+S9w3z4WOQIIw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="32.ico" size="4286">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>UHK1WRszvCpTgvOfryzdW4d2VvY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="AudioEngineCore.dll" size="2866688">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>9IMdkYQk1x61fCDvdXeYi9sC2v4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="dxbase.dll" size="121344">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Pom/ujDer7aW8NjXjf7D2LcpVls=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\1.gif" size="1810">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>MNyNlYNdksYe/KCIjytezMgPUAY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\10.gif" size="3716">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>2N0ufoylP95IY2KveRaBBvpTlr8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\100.gif" size="1780">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>F/mgyuDEQYq3zGr7ZeFfgTSPD8A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\101.gif" size="2443">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>5iXlBvnS+nEVe7PxwmUDUf7D0G8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\102.gif" size="1446">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>YmULvhvajoDuZSrzzLyKKN/lax0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\103.gif" size="2166">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>o/F6LSSUU7P39/pIQFyM/xjOmVU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\104.gif" size="2169">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>/ST919k83+vUbBfSdwtSSvKN+Tc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\105.gif" size="1277">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>9vGxJTX1uFqHa2rLVuGOsYD1mik=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\106.gif" size="1041">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>4vZCk9mzWPsBxh44CCBUYnHNrEE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\107.gif" size="1058">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>5kKOEiveNx9u1WNhj9wRF5hMKrk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\108.gif" size="1046">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>gjyHMGmxMQRvvFednP0OPhdDoAs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\109.gif" size="1081">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>U4LR3IZHE+dt5wMD3AJ60peDZxI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\11.gif" size="8033">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>cMisOD0RRvoIrndiFYAGf9voQQA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\110.gif" size="1082">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>KsFymRJ8t7SI7arE/NS7maWw7Y0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\111.gif" size="1039">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Lp6m8NErZx3UrgSqhboIGqXc4/E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\112.gif" size="1111">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0eTiG9lCaLGOTCfBujVlM4j/dSU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\113.gif" size="1015">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>/XriwxkZZcKCLIW6/rtdw0FT1lw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\114.gif" size="1003">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>iON03D9P3xfCXrBqrzHNCv+6UXM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\115.gif" size="1061">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Yrq9YBs8LgFMmRuBqp+ql+w6pHY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\116.gif" size="996">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>LN6Za0ApTKYwFSCdC3NcbYGjAts=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\117.gif" size="1041">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>4Sd/CyO+W+2Ozck496qKCoAL0Zk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\118.gif" size="1012">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>qlF+61r+poF5gmBAvwHHdzvUDek=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\119.gif" size="1101">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ssQD+j2A2w8OwSDLCCGEJ7p343k=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\12.gif" size="2247">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>g3XCzKS2LcWz+ts0FKtiEyu9fSE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\120.gif" size="1008">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>7WOd9R9R2rD93kki1BVg+viQfhI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\121.gif" size="1060">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>gbc6tW8viUJH8y5/pHzJ1cQ2rA0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\122.gif" size="999">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>U6UpgwcTJ/gO1IgN4oqGLmIUWFQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\123.gif" size="1055">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>d9xbt5mn/7Gnw9JKWSoPIZl6IeY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\124.gif" size="1022">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>QFRsOW3DethRfbk2f4x40KAY4uI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\125.gif" size="1013">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>NIdvuppIDLtt5PCkjC5TjHYxc7s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\126.gif" size="1030">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>PjsSr/EL6duPyGfqWNqGIw1dJTo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\127.gif" size="956">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>qAbkNJ+HV3Xqd7XXZqkKU6Y2xZw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\128.gif" size="1022">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>SqqoEMW5hWmyh0pIrvbklDr+aX0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\129.gif" size="972">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>vPx+2eg/PIjCxuPROszAUzIMj/I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\13.gif" size="1736">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>5E8IA1HIOLSmvqEk+239iM/YfHk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\130.gif" size="980">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>+6Aw7QaOQ+t3UNs1qcC2vLsJY/8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\131.gif" size="945">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>oh0xtt2Lwhyng5GpZRBMk3iWmfo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\132.gif" size="936">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>a9okOvqv5ilEJm6zQqG/dQYgc3E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\133.gif" size="1012">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>rUE1dPVLaqg8nhgHR6FVbXkPJic=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\134.gif" size="968">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>mlaxfy2YavT2Doz0TYtgjNKMkPI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\135.gif" size="1417">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>uap+9zi11laURYuSMHGKJwVRAH4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\14.gif" size="4006">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>yPdsS3FnnaOf72ntOjbt8MkCRrw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\15.gif" size="1562">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Q2rdZzKTIGzwoXQnxRoW+0vfnIk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\16.gif" size="1413">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>RFPN/LHGMkaRVBJM8al3B+VovOA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\17.gif" size="3366">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>IU8/kT00LYsoyTqIzRONVi0MSaQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\18.gif" size="8137">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>6iVIkGT94O4eAkQtU0UjGxE8wtk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\19.gif" size="8135">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>54+VsZa7E3OJIqevcwFZSZd7uU8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\2.gif" size="1804">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>weN3uQBk8ypW1EmARW8soojkhtQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\20.gif" size="1808">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>jrvY/SMB6g4wlQrgjVA7A4sPc+E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\21.gif" size="1864">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>BjUUk1+sQKhMx/Yz0ZyVlixfVeU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\22.gif" size="3010">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>N18cY65vbrS6a0xc1QsDkEucmZk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\23.gif" size="1950">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>txdzB56LQKq6q+bzsr3YCIq+Byo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\24.gif" size="2257">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>sZEvivPBSVbUKZxUwDzTzhzlGZE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\25.gif" size="2446">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>V9S2JjiizwUEORamZFfPB/zgbRI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\26.gif" size="4014">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>sQXfrCzSf/dEg6DMFS3PDVQPzd8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\27.gif" size="2893">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>mM0H0E3mrewg3ubygRsY6pgP4HA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\28.gif" size="3262">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>sB2ApjMbef0lJIbb7QxaDOmclj0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\29.gif" size="5861">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>xrHN1MweQpHvByg/L8Ieeum9lDg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\3.gif" size="1852">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HUaH7nkSQH1FWqmwRWSGAwUS3p0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\30.gif" size="1780">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>xrXoWHNoooZ93uxej7FC5Wx//78=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\31.gif" size="5174">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>xZK9lsLi1t+vhpyRSLPAiVEd5WM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\32.gif" size="7189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>BSGFbE7B/X/KI8vP6zuXiji4HE0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\33.gif" size="4317">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>TZDLh4KW0XwIvNVLgndlCoIDn1s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\34.gif" size="2140">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GXFQBxvTiaQZXFCPGiQitdlubwU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\35.gif" size="13392">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nKyRcsV/5sJ1493HMsraQ7OzoQc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\36.gif" size="1582">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>29hjxzJbFahR2rh3tNWRQECy1VQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\37.gif" size="1195">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>RGroIVmCaUPFFJcOK7X7nRjlvjM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\38.gif" size="1674">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>BxF+WcSVDgVUPB2heZCopuF/v6U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\39.gif" size="1798">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>CRX8fnEbga8uVPGIjtdyCL+n9iY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\4.gif" size="1977">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>gF8fJeprYKmj7KZ6xdd8XsvThak=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\40.gif" size="10092">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Lxn3d0lKEK4Bi5YaKotq7E4uHVs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\41.gif" size="3368">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>hEVINEKFjfp//NqT7cjHDv0U47E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\42.gif" size="13367">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Br+XJR0P9FyagfxNRj/YWC89Xrk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\43.gif" size="4327">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>vL8GXKsvrOX2KVXyLzGQkFfm74I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\44.gif" size="1571">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>JpFzPb23zg9TfVGASjSm5ovN1iM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\45.gif" size="4692">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>5aozLK3Q1u/mXy3w1SSimVINsMg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\46.gif" size="5162">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>wp+AMR+E2oUjizAWbLMihTGWqro=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\47.gif" size="3685">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>CmA4Qa4GjC2K5Pg7qEZXv4hKXe0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\48.gif" size="1755">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>gX1tqwZd6LsEKTGNjEHcYGrfXfA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\49.gif" size="6361">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>cIPLXF/gWLCo/VeH9ZiXoxEkOhM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\5.gif" size="1866">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>WXqbxFebIj1leK4hxIblYaauWdk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\50.gif" size="3073">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>1o8NdukDxNiGd5DGTKdXrnudPpQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\51.gif" size="3731">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0TbETYKmuCaPapWLUtqJ2pksCTs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\52.gif" size="1532">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>+BlT2iJ+UrS/4NILIoK3N8bYWrY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\53.gif" size="2056">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XaxCcCiwczPDqQmOQ60FDtGt+Co=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\54.gif" size="2362">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>2yPY7UNj1qpw6aApjrjbFE5ElMQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\55.gif" size="1582">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HsP5fFIUrPMVGZVYJrbX+M3fpng=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\56.gif" size="1170">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Z+euVpDDVSh5Znj64DB7xs2LcTk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\57.gif" size="5072">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ZUurPdRe7iRdFId88hiqWPNLF1A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\58.gif" size="2596">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>PdXE+gi7zGiDaGKXp45n+F9fAPQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\59.gif" size="1533">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>stS3o5uQHPTD7iYyZtRSINKo0CM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\6.gif" size="3556">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>kfIz5OQBYaH1ARgGkcFLJCQabok=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\60.gif" size="2667">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>q5RF0y22Sn64xkmpD2Kl5l7XRBg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\61.gif" size="1136">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>BMtnUyF1fLjpB0g/qI08ID4fMAQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\62.gif" size="1269">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nyQxpN3Cm7cJUUdfEXKEBW6I2Jo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\63.gif" size="971">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>o80FBxRYMpD1qqKwOnghkRynEz8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\64.gif" size="988">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8nSBonoYQg8laRF2PhvSvCG7ZpI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\65.gif" size="5285">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>t9WGu1KGSZF2JaDryeRU6AfJWKc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\66.gif" size="1159">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>yEjIBhydbVmv6TSfp8ssWS7irCo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\67.gif" size="2746">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>m12EJjb3CQn2xJqyMkIQmuGP3PM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\68.gif" size="4148">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>sU+VTF0vWnx0KCISMyZRhC/LQ50=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\69.gif" size="1015">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Pa5tXuWL3nC7ZV9fM9oi5xbfVAM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\7.gif" size="3929">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>dG6ImP+LbE4/J47a2sgRsXaK/ME=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\70.gif" size="1162">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>3bapv10LadPwaEskc0BVRvRmp2I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\71.gif" size="824">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>cAyHIf+u/uigA5qaycx9K2jPdYc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\72.gif" size="3679">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>BqkkChPaSl4NQpJ4Sva0L01rbpM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\73.gif" size="2195">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Uw7YtWceeMkUMuogAsrIXJQReV8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\74.gif" size="2454">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ASG9yWynYKwbNXB3Rt8a6h8LUH4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\75.gif" size="1222">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>+VYIMUTkKD6t785eIA3ugKQiW64=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\76.gif" size="1211">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>FRfqd4Fi2s26AX+g02o6Xi8aU+0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\77.gif" size="1151">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Msla0XIfwUPfXheVOI1PCyzqtzk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\78.gif" size="1565">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>F7hodDkPkR/7mZPBuKj2O98r6TE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\79.gif" size="1518">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Vrt5nuML8Ym4a1AL7fTzVOZLdfI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\8.gif" size="4679">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>p4fZeHtDhINGBtA9W3DHo3h+1GU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\80.gif" size="1537">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>LFJH/jKzlrQRoChTo9gXfBrMUBo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\81.gif" size="1591">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>NVXq5WqSptWS6Et7QLINptXP+No=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\82.gif" size="1547">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>jfxkIeXWjpoShn1cZgXt/0s0USQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\83.gif" size="1591">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>qHkRUpAg5i85mQLkKQuOQyU3j5M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\84.gif" size="3424">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>aquAVeREXNqKOkY5CFiHKLm6DSw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\85.gif" size="1581">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>BFEOJIGE9aQZ+3HMnTYYZJJpoI4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\86.gif" size="1519">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ohCNEUOlNhSmoPVOcXXQZeOAT1M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\87.gif" size="1558">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>lOUq4WcsytLsH9UGUqJvtyV+rHM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\88.gif" size="2134">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Fwr3tFSssUD/3eF2O80H9l1XVQ0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\89.gif" size="1219">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>EjkVsp8Nr+IDpwWEN/4ayQOpuL8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\9.gif" size="3298">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ybgGjZQ9kClEHF7oJQa3L9XZIw8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\90.gif" size="2743">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>s/Dco6ej6RsXjWJLGaZCfxxY+GU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\91.gif" size="654">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>u2M7NNyFn/d/7tsbPYNrn4VhNPk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\92.gif" size="1377">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XQVVjLbWTD1MIItmhR+RnNjFMqg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\93.gif" size="1119">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>X3w9P3pCPOy7GYBWD3SVeY14oE4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\94.gif" size="3426">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>EA1e+IoFeeSpmUN0b5j2//7F2Ak=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\95.gif" size="3011">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0S7LkDHsJ0eUEFQpfVQvrDwmO4Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\96.gif" size="1796">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>UihvvdfS+JZ2WIGh30utYz2e1Cs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\97.gif" size="5300">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>L2TeCQz7u7UjXnUeC481XeVYcrc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\98.gif" size="1629">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>spE4WzhSgDlAhVdneeBULrAEbhE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Emotion\99.gif" size="2261">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>RdYhU5lNJMi+dom8/apKEaCmosc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="msvcr100.dll" size="761152">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>h+PknPJOpXYujk7v3qdQ1ONlkH0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="OVCS.exe.config" size="1633">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>aKYDbmG2haDa3PtVXJ4MjR1uQnk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="VC2008.exe" size="4127240">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>lYH38J0BITP9XG99XmnAYF3ihiE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="VC2010.exe" size="4995416">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>uEuDqKZ0Ghe/tfNXi5g8HeUSWJ0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="VideoEngineCore.dll" size="659456">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>7q1DkSrVvey0HDxCFSvShvirHvY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\AudioEngineCore.dll" size="2866688">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>9IMdkYQk1x61fCDvdXeYi9sC2v4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\dxbase.dll" size="121344">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Pom/ujDer7aW8NjXjf7D2LcpVls=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\1.gif" size="1810">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>MNyNlYNdksYe/KCIjytezMgPUAY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\10.gif" size="3716">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>2N0ufoylP95IY2KveRaBBvpTlr8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\100.gif" size="1780">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>F/mgyuDEQYq3zGr7ZeFfgTSPD8A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\101.gif" size="2443">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>5iXlBvnS+nEVe7PxwmUDUf7D0G8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\102.gif" size="1446">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>YmULvhvajoDuZSrzzLyKKN/lax0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\103.gif" size="2166">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>o/F6LSSUU7P39/pIQFyM/xjOmVU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\104.gif" size="2169">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>/ST919k83+vUbBfSdwtSSvKN+Tc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\105.gif" size="1277">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>9vGxJTX1uFqHa2rLVuGOsYD1mik=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\106.gif" size="1041">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>4vZCk9mzWPsBxh44CCBUYnHNrEE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\107.gif" size="1058">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>5kKOEiveNx9u1WNhj9wRF5hMKrk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\108.gif" size="1046">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>gjyHMGmxMQRvvFednP0OPhdDoAs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\109.gif" size="1081">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>U4LR3IZHE+dt5wMD3AJ60peDZxI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\11.gif" size="8033">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>cMisOD0RRvoIrndiFYAGf9voQQA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\110.gif" size="1082">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>KsFymRJ8t7SI7arE/NS7maWw7Y0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\111.gif" size="1039">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Lp6m8NErZx3UrgSqhboIGqXc4/E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\112.gif" size="1111">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0eTiG9lCaLGOTCfBujVlM4j/dSU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\113.gif" size="1015">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>/XriwxkZZcKCLIW6/rtdw0FT1lw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\114.gif" size="1003">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>iON03D9P3xfCXrBqrzHNCv+6UXM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\115.gif" size="1061">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Yrq9YBs8LgFMmRuBqp+ql+w6pHY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\116.gif" size="996">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>LN6Za0ApTKYwFSCdC3NcbYGjAts=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\117.gif" size="1041">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>4Sd/CyO+W+2Ozck496qKCoAL0Zk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\118.gif" size="1012">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>qlF+61r+poF5gmBAvwHHdzvUDek=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\119.gif" size="1101">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ssQD+j2A2w8OwSDLCCGEJ7p343k=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\12.gif" size="2247">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>g3XCzKS2LcWz+ts0FKtiEyu9fSE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\120.gif" size="1008">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>7WOd9R9R2rD93kki1BVg+viQfhI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\121.gif" size="1060">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>gbc6tW8viUJH8y5/pHzJ1cQ2rA0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\122.gif" size="999">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>U6UpgwcTJ/gO1IgN4oqGLmIUWFQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\123.gif" size="1055">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>d9xbt5mn/7Gnw9JKWSoPIZl6IeY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\124.gif" size="1022">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>QFRsOW3DethRfbk2f4x40KAY4uI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\125.gif" size="1013">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>NIdvuppIDLtt5PCkjC5TjHYxc7s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\126.gif" size="1030">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>PjsSr/EL6duPyGfqWNqGIw1dJTo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\127.gif" size="956">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>qAbkNJ+HV3Xqd7XXZqkKU6Y2xZw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\128.gif" size="1022">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>SqqoEMW5hWmyh0pIrvbklDr+aX0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\129.gif" size="972">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>vPx+2eg/PIjCxuPROszAUzIMj/I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\13.gif" size="1736">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>5E8IA1HIOLSmvqEk+239iM/YfHk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\130.gif" size="980">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>+6Aw7QaOQ+t3UNs1qcC2vLsJY/8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\131.gif" size="945">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>oh0xtt2Lwhyng5GpZRBMk3iWmfo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\132.gif" size="936">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>a9okOvqv5ilEJm6zQqG/dQYgc3E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\133.gif" size="1012">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>rUE1dPVLaqg8nhgHR6FVbXkPJic=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\134.gif" size="968">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>mlaxfy2YavT2Doz0TYtgjNKMkPI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\135.gif" size="1417">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>uap+9zi11laURYuSMHGKJwVRAH4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\14.gif" size="4006">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>yPdsS3FnnaOf72ntOjbt8MkCRrw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\15.gif" size="1562">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Q2rdZzKTIGzwoXQnxRoW+0vfnIk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\16.gif" size="1413">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>RFPN/LHGMkaRVBJM8al3B+VovOA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\17.gif" size="3366">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>IU8/kT00LYsoyTqIzRONVi0MSaQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\18.gif" size="8137">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>6iVIkGT94O4eAkQtU0UjGxE8wtk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\19.gif" size="8135">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>54+VsZa7E3OJIqevcwFZSZd7uU8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\2.gif" size="1804">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>weN3uQBk8ypW1EmARW8soojkhtQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\20.gif" size="1808">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>jrvY/SMB6g4wlQrgjVA7A4sPc+E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\21.gif" size="1864">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>BjUUk1+sQKhMx/Yz0ZyVlixfVeU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\22.gif" size="3010">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>N18cY65vbrS6a0xc1QsDkEucmZk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\23.gif" size="1950">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>txdzB56LQKq6q+bzsr3YCIq+Byo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\24.gif" size="2257">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>sZEvivPBSVbUKZxUwDzTzhzlGZE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\25.gif" size="2446">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>V9S2JjiizwUEORamZFfPB/zgbRI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\26.gif" size="4014">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>sQXfrCzSf/dEg6DMFS3PDVQPzd8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\27.gif" size="2893">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>mM0H0E3mrewg3ubygRsY6pgP4HA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\28.gif" size="3262">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>sB2ApjMbef0lJIbb7QxaDOmclj0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\29.gif" size="5861">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>xrHN1MweQpHvByg/L8Ieeum9lDg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\3.gif" size="1852">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HUaH7nkSQH1FWqmwRWSGAwUS3p0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\30.gif" size="1780">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>xrXoWHNoooZ93uxej7FC5Wx//78=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\31.gif" size="5174">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>xZK9lsLi1t+vhpyRSLPAiVEd5WM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\32.gif" size="7189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>BSGFbE7B/X/KI8vP6zuXiji4HE0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\33.gif" size="4317">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>TZDLh4KW0XwIvNVLgndlCoIDn1s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\34.gif" size="2140">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>GXFQBxvTiaQZXFCPGiQitdlubwU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\35.gif" size="13392">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nKyRcsV/5sJ1493HMsraQ7OzoQc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\36.gif" size="1582">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>29hjxzJbFahR2rh3tNWRQECy1VQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\37.gif" size="1195">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>RGroIVmCaUPFFJcOK7X7nRjlvjM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\38.gif" size="1674">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>BxF+WcSVDgVUPB2heZCopuF/v6U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\39.gif" size="1798">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>CRX8fnEbga8uVPGIjtdyCL+n9iY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\4.gif" size="1977">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>gF8fJeprYKmj7KZ6xdd8XsvThak=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\40.gif" size="10092">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Lxn3d0lKEK4Bi5YaKotq7E4uHVs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\41.gif" size="3368">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>hEVINEKFjfp//NqT7cjHDv0U47E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\42.gif" size="13367">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Br+XJR0P9FyagfxNRj/YWC89Xrk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\43.gif" size="4327">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>vL8GXKsvrOX2KVXyLzGQkFfm74I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\44.gif" size="1571">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>JpFzPb23zg9TfVGASjSm5ovN1iM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\45.gif" size="4692">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>5aozLK3Q1u/mXy3w1SSimVINsMg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\46.gif" size="5162">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>wp+AMR+E2oUjizAWbLMihTGWqro=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\47.gif" size="3685">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>CmA4Qa4GjC2K5Pg7qEZXv4hKXe0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\48.gif" size="1755">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>gX1tqwZd6LsEKTGNjEHcYGrfXfA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\49.gif" size="6361">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>cIPLXF/gWLCo/VeH9ZiXoxEkOhM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\5.gif" size="1866">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>WXqbxFebIj1leK4hxIblYaauWdk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\50.gif" size="3073">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>1o8NdukDxNiGd5DGTKdXrnudPpQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\51.gif" size="3731">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0TbETYKmuCaPapWLUtqJ2pksCTs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\52.gif" size="1532">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>+BlT2iJ+UrS/4NILIoK3N8bYWrY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\53.gif" size="2056">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XaxCcCiwczPDqQmOQ60FDtGt+Co=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\54.gif" size="2362">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>2yPY7UNj1qpw6aApjrjbFE5ElMQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\55.gif" size="1582">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HsP5fFIUrPMVGZVYJrbX+M3fpng=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\56.gif" size="1170">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Z+euVpDDVSh5Znj64DB7xs2LcTk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\57.gif" size="5072">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ZUurPdRe7iRdFId88hiqWPNLF1A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\58.gif" size="2596">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>PdXE+gi7zGiDaGKXp45n+F9fAPQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\59.gif" size="1533">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>stS3o5uQHPTD7iYyZtRSINKo0CM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\6.gif" size="3556">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>kfIz5OQBYaH1ARgGkcFLJCQabok=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\60.gif" size="2667">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>q5RF0y22Sn64xkmpD2Kl5l7XRBg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\61.gif" size="1136">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>BMtnUyF1fLjpB0g/qI08ID4fMAQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\62.gif" size="1269">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nyQxpN3Cm7cJUUdfEXKEBW6I2Jo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\63.gif" size="971">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>o80FBxRYMpD1qqKwOnghkRynEz8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\64.gif" size="988">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>8nSBonoYQg8laRF2PhvSvCG7ZpI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\65.gif" size="5285">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>t9WGu1KGSZF2JaDryeRU6AfJWKc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\66.gif" size="1159">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>yEjIBhydbVmv6TSfp8ssWS7irCo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\67.gif" size="2746">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>m12EJjb3CQn2xJqyMkIQmuGP3PM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\68.gif" size="4148">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>sU+VTF0vWnx0KCISMyZRhC/LQ50=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\69.gif" size="1015">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Pa5tXuWL3nC7ZV9fM9oi5xbfVAM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\7.gif" size="3929">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>dG6ImP+LbE4/J47a2sgRsXaK/ME=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\70.gif" size="1162">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>3bapv10LadPwaEskc0BVRvRmp2I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\71.gif" size="824">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>cAyHIf+u/uigA5qaycx9K2jPdYc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\72.gif" size="3679">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>BqkkChPaSl4NQpJ4Sva0L01rbpM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\73.gif" size="2195">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Uw7YtWceeMkUMuogAsrIXJQReV8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\74.gif" size="2454">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ASG9yWynYKwbNXB3Rt8a6h8LUH4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\75.gif" size="1222">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>+VYIMUTkKD6t785eIA3ugKQiW64=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\76.gif" size="1211">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>FRfqd4Fi2s26AX+g02o6Xi8aU+0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\77.gif" size="1151">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Msla0XIfwUPfXheVOI1PCyzqtzk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\78.gif" size="1565">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>F7hodDkPkR/7mZPBuKj2O98r6TE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\79.gif" size="1518">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Vrt5nuML8Ym4a1AL7fTzVOZLdfI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\8.gif" size="4679">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>p4fZeHtDhINGBtA9W3DHo3h+1GU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\80.gif" size="1537">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>LFJH/jKzlrQRoChTo9gXfBrMUBo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\81.gif" size="1591">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>NVXq5WqSptWS6Et7QLINptXP+No=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\82.gif" size="1547">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>jfxkIeXWjpoShn1cZgXt/0s0USQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\83.gif" size="1591">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>qHkRUpAg5i85mQLkKQuOQyU3j5M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\84.gif" size="3424">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>aquAVeREXNqKOkY5CFiHKLm6DSw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\85.gif" size="1581">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>BFEOJIGE9aQZ+3HMnTYYZJJpoI4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\86.gif" size="1519">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ohCNEUOlNhSmoPVOcXXQZeOAT1M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\87.gif" size="1558">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>lOUq4WcsytLsH9UGUqJvtyV+rHM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\88.gif" size="2134">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Fwr3tFSssUD/3eF2O80H9l1XVQ0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\89.gif" size="1219">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>EjkVsp8Nr+IDpwWEN/4ayQOpuL8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\9.gif" size="3298">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>ybgGjZQ9kClEHF7oJQa3L9XZIw8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\90.gif" size="2743">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>s/Dco6ej6RsXjWJLGaZCfxxY+GU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\91.gif" size="654">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>u2M7NNyFn/d/7tsbPYNrn4VhNPk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\92.gif" size="1377">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XQVVjLbWTD1MIItmhR+RnNjFMqg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\93.gif" size="1119">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>X3w9P3pCPOy7GYBWD3SVeY14oE4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\94.gif" size="3426">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>EA1e+IoFeeSpmUN0b5j2//7F2Ak=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\95.gif" size="3011">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0S7LkDHsJ0eUEFQpfVQvrDwmO4Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\96.gif" size="1796">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>UihvvdfS+JZ2WIGh30utYz2e1Cs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\97.gif" size="5300">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>L2TeCQz7u7UjXnUeC481XeVYcrc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\98.gif" size="1629">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>spE4WzhSgDlAhVdneeBULrAEbhE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\Emotion\99.gif" size="2261">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>RdYhU5lNJMi+dom8/apKEaCmosc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\msvcr100.dll" size="761152">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>h+PknPJOpXYujk7v3qdQ1ONlkH0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\VC2008.exe" size="4127240">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>lYH38J0BITP9XG99XmnAYF3ihiE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\VC2010.exe" size="4995416">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>uEuDqKZ0Ghe/tfNXi5g8HeUSWJ0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="运行时包\VideoEngineCore.dll" size="659456">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>7q1DkSrVvey0HDxCFSvShvirHvY=</dsig:DigestValue>
+    </hash>
+  </file>
+</asmv1:assembly>

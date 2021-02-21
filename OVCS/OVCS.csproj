@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6E25F95B-90CD-49D4-AB1F-454BC92C18DF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OVCS</RootNamespace>
+    <AssemblyName>OVCS</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>D:\KG_SPHY_client\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://192.168.132.236:85/</InstallUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>24</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>48A87A775E21CAD183B2D079301B7DC531C11777</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>OVCS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin">
+      <HintPath>..\Dlls\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="CUST.DBClass">
+      <HintPath>..\Libs\CUST.DBClass.dll</HintPath>
+    </Reference>
+    <Reference Include="CUST.EMException">
+      <HintPath>..\Libs\CUST.EMException.dll</HintPath>
+    </Reference>
+    <Reference Include="CUST.Tools">
+      <HintPath>..\Libs\CUST.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="ESBasic">
+      <HintPath>..\Dlls\ESBasic.dll</HintPath>
+    </Reference>
+    <Reference Include="ESFramework">
+      <HintPath>..\Dlls\ESFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="ESFramework.Boost, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\ESFramework.Boost.dll</HintPath>
+    </Reference>
+    <Reference Include="OMCS, Version=3.4.1.0, Culture=neutral, PublicKeyToken=ba1538489f75683e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dlls\OMCS.dll</HintPath>
+    </Reference>
+    <Reference Include="OMCS.Boost">
+      <HintPath>..\Dlls\OMCS.Boost.dll</HintPath>
+    </Reference>
+    <Reference Include="OVCS.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\OVCS\OVCS.Core\bin\Debug\OVCS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BallonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BallonForm.Designer.cs">
+      <DependentUpon>BallonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizeHandler.cs" />
+    <Compile Include="DeviceSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceSelectForm.Designer.cs">
+      <DependentUpon>DeviceSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemotingDesktop\RemoteDesktopPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RemotingDesktop\RemoteDesktopPanel.Designer.cs">
+      <DependentUpon>RemoteDesktopPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemotingDesktop\RemotingDesktopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemotingDesktop\RemotingDesktopForm.Designer.cs">
+      <DependentUpon>RemotingDesktopForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sys.cs" />
+    <Compile Include="UserConfiguration.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SelectGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectGroupForm.Designer.cs">
+      <DependentUpon>SelectGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemSettingForm.Designer.cs">
+      <DependentUpon>SystemSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextChatControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextChatControl.designer.cs">
+      <DependentUpon>TextChatControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VideoRecorder.cs" />
+    <Compile Include="Web References\WebService1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WhiteBoardPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WhiteBoardPanel.Designer.cs">
+      <DependentUpon>WhiteBoardPanel.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BallonForm.resx">
+      <DependentUpon>BallonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceSelectForm.resx">
+      <DependentUpon>DeviceSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemotingDesktop\RemoteDesktopPanel.resx">
+      <DependentUpon>RemoteDesktopPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemotingDesktop\RemotingDesktopForm.resx">
+      <DependentUpon>RemotingDesktopForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectGroupForm.resx">
+      <DependentUpon>SelectGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSettingForm.resx">
+      <DependentUpon>SystemSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextChatControl.resx">
+      <DependentUpon>TextChatControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WhiteBoardPanel.resx">
+      <DependentUpon>WhiteBoardPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OVCS_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\WebService1\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebService1\WebService1.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="32.ico" />
+    <Content Include="AudioEngineCore.dll" />
+    <Content Include="dxbase.dll" />
+    <Content Include="Emotion\1.gif" />
+    <Content Include="Emotion\10.gif" />
+    <Content Include="Emotion\100.gif" />
+    <Content Include="Emotion\101.gif" />
+    <Content Include="Emotion\102.gif" />
+    <Content Include="Emotion\103.gif" />
+    <Content Include="Emotion\104.gif" />
+    <Content Include="Emotion\105.gif" />
+    <Content Include="Emotion\106.gif" />
+    <Content Include="Emotion\107.gif" />
+    <Content Include="Emotion\108.gif" />
+    <Content Include="Emotion\109.gif" />
+    <Content Include="Emotion\11.gif" />
+    <Content Include="Emotion\110.gif" />
+    <Content Include="Emotion\111.gif" />
+    <Content Include="Emotion\112.gif" />
+    <Content Include="Emotion\113.gif" />
+    <Content Include="Emotion\114.gif" />
+    <Content Include="Emotion\115.gif" />
+    <Content Include="Emotion\116.gif" />
+    <Content Include="Emotion\117.gif" />
+    <Content Include="Emotion\118.gif" />
+    <Content Include="Emotion\119.gif" />
+    <Content Include="Emotion\12.gif" />
+    <Content Include="Emotion\120.gif" />
+    <Content Include="Emotion\121.gif" />
+    <Content Include="Emotion\122.gif" />
+    <Content Include="Emotion\123.gif" />
+    <Content Include="Emotion\124.gif" />
+    <Content Include="Emotion\125.gif" />
+    <Content Include="Emotion\126.gif" />
+    <Content Include="Emotion\127.gif" />
+    <Content Include="Emotion\128.gif" />
+    <Content Include="Emotion\129.gif" />
+    <Content Include="Emotion\13.gif" />
+    <Content Include="Emotion\130.gif" />
+    <Content Include="Emotion\131.gif" />
+    <Content Include="Emotion\132.gif" />
+    <Content Include="Emotion\133.gif" />
+    <Content Include="Emotion\134.gif" />
+    <Content Include="Emotion\135.gif" />
+    <Content Include="Emotion\14.gif" />
+    <Content Include="Emotion\15.gif" />
+    <Content Include="Emotion\16.gif" />
+    <Content Include="Emotion\17.gif" />
+    <Content Include="Emotion\18.gif" />
+    <Content Include="Emotion\19.gif" />
+    <Content Include="Emotion\2.gif" />
+    <Content Include="Emotion\20.gif" />
+    <Content Include="Emotion\21.gif" />
+    <Content Include="Emotion\22.gif" />
+    <Content Include="Emotion\23.gif" />
+    <Content Include="Emotion\24.gif" />
+    <Content Include="Emotion\25.gif" />
+    <Content Include="Emotion\26.gif" />
+    <Content Include="Emotion\27.gif" />
+    <Content Include="Emotion\28.gif" />
+    <Content Include="Emotion\29.gif" />
+    <Content Include="Emotion\3.gif" />
+    <Content Include="Emotion\30.gif" />
+    <Content Include="Emotion\31.gif" />
+    <Content Include="Emotion\32.gif" />
+    <Content Include="Emotion\33.gif" />
+    <Content Include="Emotion\34.gif" />
+    <Content Include="Emotion\35.gif" />
+    <Content Include="Emotion\36.gif" />
+    <Content Include="Emotion\37.gif" />
+    <Content Include="Emotion\38.gif" />
+    <Content Include="Emotion\39.gif" />
+    <Content Include="Emotion\4.gif" />
+    <Content Include="Emotion\40.gif" />
+    <Content Include="Emotion\41.gif" />
+    <Content Include="Emotion\42.gif" />
+    <Content Include="Emotion\43.gif" />
+    <Content Include="Emotion\44.gif" />
+    <Content Include="Emotion\45.gif" />
+    <Content Include="Emotion\46.gif" />
+    <Content Include="Emotion\47.gif" />
+    <Content Include="Emotion\48.gif" />
+    <Content Include="Emotion\49.gif" />
+    <Content Include="Emotion\5.gif" />
+    <Content Include="Emotion\50.gif" />
+    <Content Include="Emotion\51.gif" />
+    <Content Include="Emotion\52.gif" />
+    <Content Include="Emotion\53.gif" />
+    <Content Include="Emotion\54.gif" />
+    <Content Include="Emotion\55.gif" />
+    <Content Include="Emotion\56.gif" />
+    <Content Include="Emotion\57.gif" />
+    <Content Include="Emotion\58.gif" />
+    <Content Include="Emotion\59.gif" />
+    <Content Include="Emotion\6.gif" />
+    <Content Include="Emotion\60.gif" />
+    <Content Include="Emotion\61.gif" />
+    <Content Include="Emotion\62.gif" />
+    <Content Include="Emotion\63.gif" />
+    <Content Include="Emotion\64.gif" />
+    <Content Include="Emotion\65.gif" />
+    <Content Include="Emotion\66.gif" />
+    <Content Include="Emotion\67.gif" />
+    <Content Include="Emotion\68.gif" />
+    <Content Include="Emotion\69.gif" />
+    <Content Include="Emotion\7.gif" />
+    <Content Include="Emotion\70.gif" />
+    <Content Include="Emotion\71.gif" />
+    <Content Include="Emotion\72.gif" />
+    <Content Include="Emotion\73.gif" />
+    <Content Include="Emotion\74.gif" />
+    <Content Include="Emotion\75.gif" />
+    <Content Include="Emotion\76.gif" />
+    <Content Include="Emotion\77.gif" />
+    <Content Include="Emotion\78.gif" />
+    <Content Include="Emotion\79.gif" />
+    <Content Include="Emotion\8.gif" />
+    <Content Include="Emotion\80.gif" />
+    <Content Include="Emotion\81.gif" />
+    <Content Include="Emotion\82.gif" />
+    <Content Include="Emotion\83.gif" />
+    <Content Include="Emotion\84.gif" />
+    <Content Include="Emotion\85.gif" />
+    <Content Include="Emotion\86.gif" />
+    <Content Include="Emotion\87.gif" />
+    <Content Include="Emotion\88.gif" />
+    <Content Include="Emotion\89.gif" />
+    <Content Include="Emotion\9.gif" />
+    <Content Include="Emotion\90.gif" />
+    <Content Include="Emotion\91.gif" />
+    <Content Include="Emotion\92.gif" />
+    <Content Include="Emotion\93.gif" />
+    <Content Include="Emotion\94.gif" />
+    <Content Include="Emotion\95.gif" />
+    <Content Include="Emotion\96.gif" />
+    <Content Include="Emotion\97.gif" />
+    <Content Include="Emotion\98.gif" />
+    <Content Include="Emotion\99.gif" />
+    <Content Include="msvcr100.dll" />
+    <Content Include="VC2008.exe" />
+    <Content Include="VC2010.exe" />
+    <Content Include="VideoEngineCore.dll" />
+    <Content Include="运行时包\AudioEngineCore.dll" />
+    <Content Include="运行时包\dxbase.dll" />
+    <Content Include="运行时包\Emotion\1.gif" />
+    <Content Include="运行时包\Emotion\10.gif" />
+    <Content Include="运行时包\Emotion\100.gif" />
+    <Content Include="运行时包\Emotion\101.gif" />
+    <Content Include="运行时包\Emotion\102.gif" />
+    <Content Include="运行时包\Emotion\103.gif" />
+    <Content Include="运行时包\Emotion\104.gif" />
+    <Content Include="运行时包\Emotion\105.gif" />
+    <Content Include="运行时包\Emotion\106.gif" />
+    <Content Include="运行时包\Emotion\107.gif" />
+    <Content Include="运行时包\Emotion\108.gif" />
+    <Content Include="运行时包\Emotion\109.gif" />
+    <Content Include="运行时包\Emotion\11.gif" />
+    <Content Include="运行时包\Emotion\110.gif" />
+    <Content Include="运行时包\Emotion\111.gif" />
+    <Content Include="运行时包\Emotion\112.gif" />
+    <Content Include="运行时包\Emotion\113.gif" />
+    <Content Include="运行时包\Emotion\114.gif" />
+    <Content Include="运行时包\Emotion\115.gif" />
+    <Content Include="运行时包\Emotion\116.gif" />
+    <Content Include="运行时包\Emotion\117.gif" />
+    <Content Include="运行时包\Emotion\118.gif" />
+    <Content Include="运行时包\Emotion\119.gif" />
+    <Content Include="运行时包\Emotion\12.gif" />
+    <Content Include="运行时包\Emotion\120.gif" />
+    <Content Include="运行时包\Emotion\121.gif" />
+    <Content Include="运行时包\Emotion\122.gif" />
+    <Content Include="运行时包\Emotion\123.gif" />
+    <Content Include="运行时包\Emotion\124.gif" />
+    <Content Include="运行时包\Emotion\125.gif" />
+    <Content Include="运行时包\Emotion\126.gif" />
+    <Content Include="运行时包\Emotion\127.gif" />
+    <Content Include="运行时包\Emotion\128.gif" />
+    <Content Include="运行时包\Emotion\129.gif" />
+    <Content Include="运行时包\Emotion\13.gif" />
+    <Content Include="运行时包\Emotion\130.gif" />
+    <Content Include="运行时包\Emotion\131.gif" />
+    <Content Include="运行时包\Emotion\132.gif" />
+    <Content Include="运行时包\Emotion\133.gif" />
+    <Content Include="运行时包\Emotion\134.gif" />
+    <Content Include="运行时包\Emotion\135.gif" />
+    <Content Include="运行时包\Emotion\14.gif" />
+    <Content Include="运行时包\Emotion\15.gif" />
+    <Content Include="运行时包\Emotion\16.gif" />
+    <Content Include="运行时包\Emotion\17.gif" />
+    <Content Include="运行时包\Emotion\18.gif" />
+    <Content Include="运行时包\Emotion\19.gif" />
+    <Content Include="运行时包\Emotion\2.gif" />
+    <Content Include="运行时包\Emotion\20.gif" />
+    <Content Include="运行时包\Emotion\21.gif" />
+    <Content Include="运行时包\Emotion\22.gif" />
+    <Content Include="运行时包\Emotion\23.gif" />
+    <Content Include="运行时包\Emotion\24.gif" />
+    <Content Include="运行时包\Emotion\25.gif" />
+    <Content Include="运行时包\Emotion\26.gif" />
+    <Content Include="运行时包\Emotion\27.gif" />
+    <Content Include="运行时包\Emotion\28.gif" />
+    <Content Include="运行时包\Emotion\29.gif" />
+    <Content Include="运行时包\Emotion\3.gif" />
+    <Content Include="运行时包\Emotion\30.gif" />
+    <Content Include="运行时包\Emotion\31.gif" />
+    <Content Include="运行时包\Emotion\32.gif" />
+    <Content Include="运行时包\Emotion\33.gif" />
+    <Content Include="运行时包\Emotion\34.gif" />
+    <Content Include="运行时包\Emotion\35.gif" />
+    <Content Include="运行时包\Emotion\36.gif" />
+    <Content Include="运行时包\Emotion\37.gif" />
+    <Content Include="运行时包\Emotion\38.gif" />
+    <Content Include="运行时包\Emotion\39.gif" />
+    <Content Include="运行时包\Emotion\4.gif" />
+    <Content Include="运行时包\Emotion\40.gif" />
+    <Content Include="运行时包\Emotion\41.gif" />
+    <Content Include="运行时包\Emotion\42.gif" />
+    <Content Include="运行时包\Emotion\43.gif" />
+    <Content Include="运行时包\Emotion\44.gif" />
+    <Content Include="运行时包\Emotion\45.gif" />
+    <Content Include="运行时包\Emotion\46.gif" />
+    <Content Include="运行时包\Emotion\47.gif" />
+    <Content Include="运行时包\Emotion\48.gif" />
+    <Content Include="运行时包\Emotion\49.gif" />
+    <Content Include="运行时包\Emotion\5.gif" />
+    <Content Include="运行时包\Emotion\50.gif" />
+    <Content Include="运行时包\Emotion\51.gif" />
+    <Content Include="运行时包\Emotion\52.gif" />
+    <Content Include="运行时包\Emotion\53.gif" />
+    <Content Include="运行时包\Emotion\54.gif" />
+    <Content Include="运行时包\Emotion\55.gif" />
+    <Content Include="运行时包\Emotion\56.gif" />
+    <Content Include="运行时包\Emotion\57.gif" />
+    <Content Include="运行时包\Emotion\58.gif" />
+    <Content Include="运行时包\Emotion\59.gif" />
+    <Content Include="运行时包\Emotion\6.gif" />
+    <Content Include="运行时包\Emotion\60.gif" />
+    <Content Include="运行时包\Emotion\61.gif" />
+    <Content Include="运行时包\Emotion\62.gif" />
+    <Content Include="运行时包\Emotion\63.gif" />
+    <Content Include="运行时包\Emotion\64.gif" />
+    <Content Include="运行时包\Emotion\65.gif" />
+    <Content Include="运行时包\Emotion\66.gif" />
+    <Content Include="运行时包\Emotion\67.gif" />
+    <Content Include="运行时包\Emotion\68.gif" />
+    <Content Include="运行时包\Emotion\69.gif" />
+    <Content Include="运行时包\Emotion\7.gif" />
+    <Content Include="运行时包\Emotion\70.gif" />
+    <Content Include="运行时包\Emotion\71.gif" />
+    <Content Include="运行时包\Emotion\72.gif" />
+    <Content Include="运行时包\Emotion\73.gif" />
+    <Content Include="运行时包\Emotion\74.gif" />
+    <Content Include="运行时包\Emotion\75.gif" />
+    <Content Include="运行时包\Emotion\76.gif" />
+    <Content Include="运行时包\Emotion\77.gif" />
+    <Content Include="运行时包\Emotion\78.gif" />
+    <Content Include="运行时包\Emotion\79.gif" />
+    <Content Include="运行时包\Emotion\8.gif" />
+    <Content Include="运行时包\Emotion\80.gif" />
+    <Content Include="运行时包\Emotion\81.gif" />
+    <Content Include="运行时包\Emotion\82.gif" />
+    <Content Include="运行时包\Emotion\83.gif" />
+    <Content Include="运行时包\Emotion\84.gif" />
+    <Content Include="运行时包\Emotion\85.gif" />
+    <Content Include="运行时包\Emotion\86.gif" />
+    <Content Include="运行时包\Emotion\87.gif" />
+    <Content Include="运行时包\Emotion\88.gif" />
+    <Content Include="运行时包\Emotion\89.gif" />
+    <Content Include="运行时包\Emotion\9.gif" />
+    <Content Include="运行时包\Emotion\90.gif" />
+    <Content Include="运行时包\Emotion\91.gif" />
+    <Content Include="运行时包\Emotion\92.gif" />
+    <Content Include="运行时包\Emotion\93.gif" />
+    <Content Include="运行时包\Emotion\94.gif" />
+    <Content Include="运行时包\Emotion\95.gif" />
+    <Content Include="运行时包\Emotion\96.gif" />
+    <Content Include="运行时包\Emotion\97.gif" />
+    <Content Include="运行时包\Emotion\98.gif" />
+    <Content Include="运行时包\Emotion\99.gif" />
+    <Content Include="运行时包\msvcr100.dll" />
+    <Content Include="运行时包\VC2008.exe" />
+    <Content Include="运行时包\VC2010.exe" />
+    <Content Include="运行时包\VideoEngineCore.dll" />
+    <None Include="Web References\WebService1\WebService1.disco" />
+    <None Include="Resources\MinIcons_005.png" />
+    <None Include="Resources\Hor.bmp" />
+    <None Include="Resources\Ver.bmp" />
+    <None Include="Resources\音频_.png" />
+    <None Include="Resources\音频.png" />
+    <None Include="Resources\视频_.png" />
+    <None Include="Resources\视频.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Visual.C++.14.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Visual C++ "14" Runtime Libraries %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:10469/WebService1.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebService1\</RelPath>
+      <UpdateFromURL>http://localhost:10469/WebService1.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>OVCS_WebService1_WebService1</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="OVCS.Core.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="OVCS.pdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

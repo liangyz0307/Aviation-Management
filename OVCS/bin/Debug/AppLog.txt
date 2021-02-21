@@ -1,0 +1,80 @@
+
+2017/8/23 11:03:58 : 高 －－ System.Web.Services.Protocols.SoapException: 服务器无法处理请求。 ---> System.TypeInitializationException: “CUST.DBClass”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能找到文件“C:\Users\邓鑫\Desktop\空管\MAir\Server\#Sys.config”。
+   在 CUST.DBClass.GetConStr(String sKey)
+   在 CUST.DBClass..cctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Server.WebService1.Login(String loginname, String password) 位置 C:\Users\邓鑫\Desktop\空管\MAir\Server\WebService1.asmx.cs:行号 36
+   --- 内部异常堆栈跟踪的结尾 --- [:]    在 System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   在 System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   在 OVCS.WebService1.WebService1.Login(String loginname, String password) 位置 C:\Users\邓鑫\Desktop\空管\MAir\OVCS\Web References\WebService1\Reference.cs:行号 78
+   在 OVCS.LoginForm.button2_Click(Object sender, EventArgs e) 位置 C:\Users\邓鑫\Desktop\空管\MAir\OVCS\LoginForm.cs:行号 183 。错误类型:System.Web.Services.Protocols.SoapException。位置：LoginForm.button2_Click登录的处理
+
+
+2017/8/23 14:59:41 : 高 －－ System.Web.Services.Protocols.SoapException: 服务器无法处理请求。 ---> System.Exception: 登录系统错误，帐号密码错误或不在有效时间内!
+   在 Server.WebService1.Login(String loginname, String password) 位置 C:\Users\邓鑫\Desktop\空管\MAir\Server\WebService1.asmx.cs:行号 36
+   --- 内部异常堆栈跟踪的结尾 --- [:]    在 System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   在 System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   在 OVCS.WebService1.WebService1.Login(String loginname, String password) 位置 C:\Users\邓鑫\Desktop\空管\MAir\OVCS\Web References\WebService1\Reference.cs:行号 78
+   在 OVCS.LoginForm.button2_Click(Object sender, EventArgs e) 位置 C:\Users\邓鑫\Desktop\空管\MAir\OVCS\LoginForm.cs:行号 184 。错误类型:System.Web.Services.Protocols.SoapException。位置：LoginForm.button2_Click登录的处理
+
+
+2017/8/23 21:26:08 : 高 －－ 无法连接到远程服务器 [:]    在 System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   在 System.Net.HttpWebRequest.GetRequestStream()
+   在 System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   在 OVCS.WebService1.WebService1.Login(String loginname, String password) 位置 C:\Users\邓鑫\Desktop\空管\MAir\OVCS\Web References\WebService1\Reference.cs:行号 78
+   在 OVCS.LoginForm.button2_Click(Object sender, EventArgs e) 位置 C:\Users\邓鑫\Desktop\空管\MAir\OVCS\LoginForm.cs:行号 184 。错误类型:System.Net.WebException。位置：LoginForm.button2_Click登录的处理
+
+
+2017/8/24 9:09:39 : 高 －－ System.Web.Services.Protocols.SoapException: 服务器无法处理请求。 ---> System.InvalidOperationException: 超时时间已到。超时时间已到，但是尚未从池中获取连接。出现这种情况可能是因为所有池连接均在使用，并且达到了最大池大小。
+   在 Server.WebService1.Login(String loginname, String password) 位置 C:\Users\邓鑫\Desktop\空管\MAir\Server\WebService1.asmx.cs:行号 36
+   --- 内部异常堆栈跟踪的结尾 --- [:]    在 System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   在 System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   在 OVCS.WebService1.WebService1.Login(String loginname, String password) 位置 C:\Users\邓鑫\Desktop\空管\MAir\OVCS\Web References\WebService1\Reference.cs:行号 78
+   在 OVCS.LoginForm.button2_Click(Object sender, EventArgs e) 位置 C:\Users\邓鑫\Desktop\空管\MAir\OVCS\LoginForm.cs:行号 184 。错误类型:System.Web.Services.Protocols.SoapException。位置：LoginForm.button2_Click登录的处理
+
+
+2017/8/24 20:41:54 : 高 －－ 由于目标计算机积极拒绝，无法连接。 192.168.132.236:4538 [:]    在 eyvLKZA91Nlx65tPk24.od8KRGAErVikMq8Ihjx.dt5vCaRTaU()
+   在 gsSNNem8nfK5u3hSOTl.jEbLddmmbuDpTqbFUyH.zT29UIuV3eF4DpoT7tJ(Object )
+   在 gsSNNem8nfK5u3hSOTl.jEbLddmmbuDpTqbFUyH.Initialize()
+   在 OiRitj84KP1xwNQNoXL.MgSmsc8Xxm50w9H39k4.H4jPqA8PAUNoAI9Pthn(Object )
+   在 OiRitj84KP1xwNQNoXL.MgSmsc8Xxm50w9H39k4.Initialize(String  , String  , String  , Int32  , ICustomizeHandler  )
+   在 OVCS.LoginForm.Login(Boolean isVisitor) 位置 d:\KongGuan\MAir_2017-8-24 192834\OVCS\LoginForm.cs:行号 106
+   在 OVCS.LoginForm.button2_Click(Object sender, EventArgs e) 位置 d:\KongGuan\MAir_2017-8-24 192834\OVCS\LoginForm.cs:行号 195 。错误类型:System.Net.Sockets.SocketException。位置：LoginForm.button2_Click登录的处理
+
+
+2017/8/24 20:42:28 : 高 －－ Network connection is disconnected! [:]    在 C5JuL88ucuEOvuOuykS.qA8Uj88ZFVYFQZcCNPV.PickupResponse(Int32  , Int32  )
+   在 ND5d978Yrv92qI720dJ.ppqD47888R6WqRWkR8o.vLVU996YuL(KYsbeaSJFouVZKgobl  , Nullable`1 resKey)
+   在 dZFc4n4B8u5ndBq1kQN.hUrs5o4COZLohMcaQQa.yKtyltKw2K()
+   在 GTh74yYKi0ZhqdNFfVP.KIHZKmY46UgxRnL4kah.d9lBvMOK869MRm2lT8A(Object )
+   在 GTh74yYKi0ZhqdNFfVP.KIHZKmY46UgxRnL4kah.kL7ieuseXy(String  , Boolean  )
+   在 OiRitj84KP1xwNQNoXL.MgSmsc8Xxm50w9H39k4.IEfodk8a63WaZpvRCuY(Object , Object , Boolean  )
+   在 OiRitj84KP1xwNQNoXL.MgSmsc8Xxm50w9H39k4.Initialize(String  , String  , String  , Int32  , ICustomizeHandler  )
+   在 OVCS.LoginForm.Login(Boolean isVisitor) 位置 d:\KongGuan\MAir_2017-8-24 192834\OVCS\LoginForm.cs:行号 106
+   在 OVCS.LoginForm.button2_Click(Object sender, EventArgs e) 位置 d:\KongGuan\MAir_2017-8-24 192834\OVCS\LoginForm.cs:行号 195 。错误类型:System.Exception。位置：LoginForm.button2_Click登录的处理
+
+
+2017/8/24 20:43:30 : 高 －－ System.Web.Services.Protocols.SoapException: 服务器无法处理请求。 ---> System.Exception: 登录系统错误，帐号密码错误或不在有效时间内!
+   在 Server.WebService1.Login(String loginname, String password) 位置 C:\Users\邓鑫\Desktop\空管\MAir\Server\WebService1.asmx.cs:行号 36
+   --- 内部异常堆栈跟踪的结尾 --- [:]    在 System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall)
+   在 System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters)
+   在 OVCS.WebService1.WebService1.Login(String loginname, String password) 位置 d:\KongGuan\MAir_2017-8-24 192834\OVCS\Web References\WebService1\Reference.cs:行号 78
+   在 OVCS.LoginForm.button2_Click(Object sender, EventArgs e) 位置 d:\KongGuan\MAir_2017-8-24 192834\OVCS\LoginForm.cs:行号 182 。错误类型:System.Web.Services.Protocols.SoapException。位置：LoginForm.button2_Click登录的处理
+
+
+2017/9/5 19:56:44 : 高 －－ 由于目标计算机积极拒绝，无法连接。 192.168.132.236:4538 [:]    在 eyvLKZA91Nlx65tPk24.od8KRGAErVikMq8Ihjx.dt5vCaRTaU()
+   在 gsSNNem8nfK5u3hSOTl.jEbLddmmbuDpTqbFUyH.zT29UIuV3eF4DpoT7tJ(Object )
+   在 gsSNNem8nfK5u3hSOTl.jEbLddmmbuDpTqbFUyH.Initialize()
+   在 OiRitj84KP1xwNQNoXL.MgSmsc8Xxm50w9H39k4.H4jPqA8PAUNoAI9Pthn(Object )
+   在 OiRitj84KP1xwNQNoXL.MgSmsc8Xxm50w9H39k4.Initialize(String  , String  , String  , Int32  , ICustomizeHandler  )
+   在 OVCS.LoginForm.Login(Boolean isVisitor) 位置 d:\KongGuan\MAir1.1\OVCS\LoginForm.cs:行号 106
+   在 OVCS.LoginForm.button2_Click(Object sender, EventArgs e) 位置 d:\KongGuan\MAir1.1\OVCS\LoginForm.cs:行号 195 。错误类型:System.Net.Sockets.SocketException。位置：LoginForm.button2_Click登录的处理
+
+
+2017/9/5 19:57:35 : 高 －－ 由于目标计算机积极拒绝，无法连接。 192.168.132.236:4538 [:]    在 eyvLKZA91Nlx65tPk24.od8KRGAErVikMq8Ihjx.dt5vCaRTaU()
+   在 gsSNNem8nfK5u3hSOTl.jEbLddmmbuDpTqbFUyH.zT29UIuV3eF4DpoT7tJ(Object )
+   在 gsSNNem8nfK5u3hSOTl.jEbLddmmbuDpTqbFUyH.Initialize()
+   在 OiRitj84KP1xwNQNoXL.MgSmsc8Xxm50w9H39k4.H4jPqA8PAUNoAI9Pthn(Object )
+   在 OiRitj84KP1xwNQNoXL.MgSmsc8Xxm50w9H39k4.Initialize(String  , String  , String  , Int32  , ICustomizeHandler  )
+   在 OVCS.LoginForm.Login(Boolean isVisitor) 位置 d:\KongGuan\MAir1.1\OVCS\LoginForm.cs:行号 106
+   在 OVCS.LoginForm.button2_Click(Object sender, EventArgs e) 位置 d:\KongGuan\MAir1.1\OVCS\LoginForm.cs:行号 195 。错误类型:System.Net.Sockets.SocketException。位置：LoginForm.button2_Click登录的处理
+
