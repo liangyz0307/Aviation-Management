@@ -1,0 +1,177 @@
+访问网址：http://192.168.132.225:80
+账号：      201810002      ，密码000000	延吉普通员工_测试	，只能看到自己本人的信息，并且只有提交和修改的权限，信息提交完，对应部门的经理可以处理
+	201810003      ，密码000000	长白山普通员工_测试	，只能看到自己本人的信息，并且只有提交和修改的权限，信息提交完，对应部门的经理可以处理
+	201810004      ，密码000000	长春普通员工_测试	，只能看到本人自己的信息，并且只有提交和修改的权限，信息提交完，对应部门的经理可以处理
+	201810005      ，密码000000	延吉经理_测试，可以看到该部门下所有员工的信息，拥有该部门的查询添加编辑删除提交审核驳回权限
+	201810006      ，密码000000	长白山经理_测试，可以看到该部门下所有员工的信息，拥有该部门的查询添加编辑删除提交审核驳回权限
+	201810007      ，密码000000	长春经理_测试，可以看到该部门下所有员工的信息，拥有该部门的查询添加编辑删除提交审核驳回权限
+	201810008      ，密码000000	总经理_测试，可以看到所有部门下所有员工的信息，拥有所有部门的查询添加编辑删除提交审核驳回权限
+
+
+
+www.damoitxueyuan.com 
+
+exp kg/manager@CUST file=C:\KongGuan_BF\20180927.dmp owner=kg
+imp kg/manager@CUST file=C:\KongGuan_BF\20180927.dmp
+
+
+
+
+
+-----------------------------
+ ---author:陆沛君
+ ---time:2017年11月30日10:00:00
+ ---desc:奖励记录查询
+-----------------------------
+procedure Select_YGJL_Pro
+  (
+     p_rqks in KG_YGJL.rq%type,--1.开始时间
+     p_rqjs in KG_YGJL.rq%type,--2.结束时间
+     p_sjr in KG_YGJL.sjr%type,--3.受奖人
+     p_bmdm in KG_YGJL.BMDM%type,--部门代码
+     p_jlzl in KG_YGJL.jlzl%type,--4.奖励种类
+     p_jldj in KG_YGJL.Jldj%type,--5.奖励等级
+    
+     p_zt in KG_YGJL.zt%type,--6.状态
+     p_userid in number,--权限userid
+     p_pagesize in integer,--每页容量
+     p_currentpage in integer,--当前页码
+     p_cur out cur
+  )
+as
+     p_minRowNum integer;
+     p_maxRowNum integer;
+begin
+     p_minRowNum:=(p_currentpage-1)*p_pagesize;
+     p_maxRowNum:=p_currentpage*p_pagesize;
+  open p_cur for
+  
+  select 
+                    distinct (TBBB.id),--惩罚编号
+                    TBBB.rq,--惩罚时间
+                    TBBB.sjr,--受奖人编号
+                    TBBB.sjrxm,--受奖人姓名
+                    TBBB.bmdm,--部门代码
+                    TBBB.jlzl,--奖励种类
+                    TBBB.jldj,--奖励等级
+                    TBBB.jlyy,--奖励原因
+                    TBBB.jlnr,--奖励内容
+                    TBBB.fzr,--负责人编号
+                    TBBB.fzrxm,--负责人姓名
+                    TBBB.csr,--初审人
+                    TBBB.csrxm,--初审人姓名
+                    TBBB.zsr,--终审人
+                    TBBB.zsrxm,--终审人姓名
+                    TBBB.lrr,--录入人
+                    TBBB.lrrxm,--录入人姓名
+                    TBBB.zt,--状态
+                    TBBB.bhyy,--驳回原因
+                    TBBB.Sjbs,
+                    TBBB.Sjc from
+  ( 
+           select
+                    TBB.id,--惩罚编号
+                    TBB.rq,--惩罚时间
+                    TBB.sjr,--受奖人编号
+                    TBB.sjrxm,--受奖人姓名
+                    TBB.bmdm,--部门代码
+                    TBB.jlzl,--奖励种类
+                    TBB.jldj,--奖励等级
+                    TBB.jlyy,--奖励原因
+                    TBB.jlnr,--奖励内容
+                    TBB.fzr,--负责人编号
+                    TBB.fzrxm,--负责人姓名
+                    TBB.csr,--初审人
+                    TBB.csrxm,--初审人姓名
+                    TBB.zsr,--终审人
+                    TBB.zsrxm,--终审人姓名
+                    TBB.lrr,--录入人
+                    TBB.lrrxm,--录入人姓名
+                    TBB.zt,--状态
+                    TBB.bhyy,--驳回原因
+                    TBB.Sjbs,
+                    TBB.Sjc,
+                  ROWNUM RN
+                   from
+                   (
+                           select
+                                TB.id,--惩罚编号
+                                TB.rq,--惩罚时间
+                                TB.sjr,--受罚人编号
+                                TB.sjrxm,--受罚人姓名
+                                TB.bmdm,
+                                TB.jlzl,--事件种类
+                                TB.jldj,
+                                TB.jlyy,--简要经历和原因
+                                TB.jlnr,--承担责任
+                                TB.fzr,--负责人编号
+                                TB.fzrxm,--负责人姓名
+                                TB.csr,--初审人
+                                TB.csrxm,--初审人姓名
+                                TB.zsr,--终审人
+                                TB.zsrxm,--终审人姓名
+                                TB.lrr,--录入人
+                                TB.lrrxm,--录入人姓名
+                                TB.zt,--状态
+                                TB.bhyy,--驳回原因
+                                TB.Sjbs,
+                                TB.Sjc,
+                           ROWNUM RN
+                          from(
+                                select
+                                KG_YGJL.id,--奖励编号
+                                KG_YGJL.rq,--奖励时间
+                                KG_YGJL.sjr,--受奖人编号
+                                sjr.xm sjrxm,--受奖人姓名 
+                                bm.bmdm,     -- 部门名称                        
+                                KG_YGJL.jlzl,--事件种类
+                                KG_YGJL.jldj,
+                                KG_YGJL.jlyy,--简要经历和原因
+                                KG_YGJL.jlnr,
+                                KG_YGJL.fzr,--负责人编号
+                                fzr.xm fzrxm,--负责人姓名
+                                KG_YGJL.csr,--初审人编号
+                                csr.xm csrxm,--初责人姓名
+                                KG_YGJL.zsr,--终审人编号
+                                zsr.xm zsrxm,--终责人姓名
+                                KG_YGJL.lrr,--录入人编号
+                                lrr.xm lrrxm,--录入人姓名
+                                KG_YGJL.zt,--状态
+                                KG_YGJL.bhyy,--驳回原因
+                                KG_YGJL.Sjbs,
+                                KG_YGJL.Sjc,
+                                 ROWNUM RN
+                                FROM KG_YGJL
+                                left join kg_yg fzr
+                                on fzr.bh=KG_YGJL.fzr 
+                                left join kg_yg sjr
+                                on sjr.bh=KG_YGJL.sjr 
+                                left join kg_yg csr
+                                on csr.bh=KG_YGJL.csr
+                                left join kg_yg zsr
+                                on zsr.bh=KG_YGJL.zsr
+                                left join kg_yg lrr
+                                on lrr.bh=KG_YGJL.lrr
+                                left join bm 
+                                on KG_YGJL.bmdm=bm.bmdm  
+                               where(KG_YGJL.sjr=p_sjr or p_sjr is null)
+                                   and((KG_YGJL.zt='3'and KG_YGJL.sjbs='1' )or(KG_YGJL.Lrr= (select zh from yh where yh.id=p_userid)) or (KG_YGJL.zt!='0'and KG_YGJL.csr=(select zh from yh where yh.id=p_userid))  or (KG_YGJL.zt!='0'and KG_YGJL.zsr=(select zh from yh where yh.id=p_userid))  )
+                                   and(KG_YGJL.Sjbs!='3')
+                                   and(KG_YGJL.zt=p_zt or p_zt='-1')
+                                   and(KG_YGJL.bmdm=p_bmdm or p_bmdm='-1')
+                                   and (KG_YGJL.jlzl=p_jlzl or p_jlzl='-1')
+                                   and (KG_YGJL.jldj=p_jldj or p_jldj='-1')
+                                   and(KG_YGJL.rq>=p_rqks or p_rqks is null)
+                                   and(KG_YGJL.rq<=p_rqjs or p_rqjs is null)
+                                   and(bm.bmdm in (select distinct bmdm from kg_qx_bm where jsdm in(select distinct jsdm from kg_yhjs where yhid=p_userid)and qxdm ='110501'))                                                  
+                                   order by KG_YGJL.id desc
+                               )TB
+                     )TBB where  TBB.RN > p_minRowNum  And TBB.RN <= p_maxRowNum 
+                     
+                      and (   (TBB.id in (select id_ from (select sjc ,max(id) id_ from kg_ygjl group by sjc ))) and  (  ((select zh from yh where yh.id=p_userid) in TBB.lrr )  or  ( (select zh from yh where yh.id=p_userid) in TBB.csr )  or ( (select zh from yh where yh.id=p_userid) in TBB.zsr)    ) )
+                      or(     ((select zh from yh where yh.id=p_userid) not in TBB.lrr )   and   ((select zh from yh where yh.id=p_userid) not in TBB.csr)   and ((select zh from yh where yh.id=p_userid) not in TBB.zsr)  and(TBB.zt='3') and(TBB.sjbs='1')  )                                    
+
+)TBBB
+;
+end Select_YGJL_Pro;
+

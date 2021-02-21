@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Sys_DQZC.master.cs" Inherits="CUST.WKG.MenHu.main.Sys_DQZC" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+     <title>党群之窗</title>
+     <link rel="stylesheet" type="text/css" href="../../Content/css/ext-all.css"/>
+    <link type="text/css" rel="stylesheet" href="../../Content/css/main.css" =/>
+    <link type="text/css" rel="stylesheet" href="../../Content/css/xtheme.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Content/css/highslide.css"/>
+    <!--[if lt IE 7]>
+    <link rel="stylesheet" type="text/css" href="highslide/highslide-ie6.css" />
+    <![endif]-->	
+    
+   <link rel="stylesheet" type="text/css" href="../../Content/css/rss.css"/>
+    <link rel="stylesheet" href="../../Content/css/index.css"/>
+      <link rel="stylesheet" href="../../Content/css/qczc_index.css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   <%-- <form id="form1" runat="server">--%>
+        <div id="container" >
+             <div id="header">
+             <a id="logo">
+                    <img src="../../Content/images/banner.jpg" style="width:100%" />
+             </a>
+             <div style="position:absolute;left:0px;bottom:0px;width:100%;height:34px;" runat="server"  >
+	             <div id="top-nav-wrapper"  style="left:0px;background:url(../../Content/images/nav_bg.gif) repeat-x; width: 980px;">
+		     <ul id="topnav" class="nav"  style="right: 0px;">
+					<li class="first-level current">
+						<a class="first-level"  style="color:white" href="DQZC_DYIndex.aspx"><span style="font-weight:500;">首页</span></a>
+					</li>
+					<li class="first-level "  >
+						<a class="first-leve1"   id="zzjg" runat="server" style="color:white" href="DQZC_ZZJGCX.aspx" ><span>组织机构</span></a>
+					</li>
+                    <li class="first-level "  runat="server" >
+						<a class="first-level" id="zbjs" runat="server" style="color:white"   onserverclick="zbjs_Click" ><span>支部建设</span></a>
+                        <%--<asp:Button ID="btn_zbjs" runat="server" class="btn  radius" Text="zbjs"  BackColor="#ab2025" ForeColor="White" OnClick="zbjs_Click" style="visibility:hidden" />--%>
+					</li>
+            	
+                  <li class="first-level " >
+						<a class="first-level"   id="dygl" runat="server" style="color:white" href="DYCX.aspx"><span>党员管理</span></a>
+					</li>
+                 <li>
+                     	<a class="first-level"  id="dqghdt" runat="server" style="color:white" onserverclick="dqghdt_ServerClick"><span> 工会管理</span></a>
+                 </li>
+                 <li class="first-level " >
+						<a class="first-level"   id="dyzx" runat="server" style="color:white" href="DQZC_DYZX.aspx"><span>党员在线</span></a>
+			     </li> 
+                 <li class="first-level " >
+						<a class="first-level"   id="dszs" runat="server" style="color:white" href="DQZC_DSZS.aspx"><span>学习教育</span></a>
+				 </li> 
+                 <li class="first-level " style="width:300px" >
+						<a class="first-level" style="color:white;"  href="../MenHu/Sys_Index.aspx"><span>返回门户首页</span></a>
+				 </li>
+		</ul>
+	</div>
+             </div>
+        </div>
+             <div style="height:780px">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+                </asp:ContentPlaceHolder>
+            </div>
+            
+       </div>   
+   <%-- </form>--%>
+</body>
+</html>

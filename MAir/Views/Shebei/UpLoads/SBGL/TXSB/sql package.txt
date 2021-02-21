@@ -1,0 +1,218 @@
+-------------------------------------
+--创建人：李海军
+--创建时间：2018年4月13日 09:47:43
+--功能描述：查询通信设备最大设备编号
+---------------------- --------------
+procedure Select_Max_txsbbh
+(
+p_bm  varchar,
+p_cur out cur
+);
+-------------------------------------
+--创建人：李海军
+--创建时间：2018年4月13日 09:47:43
+--功能描述：插入通信设备
+---------------------- --------------
+  Procedure Insert_TXSB
+  (
+    p_sbbh in kg_txsb.sbbh%type,--设备编号
+    p_sblx in kg_txsb.sblx%type,--设备类型
+    p_tzmc in kg_txsb.tzmc%type,--台站名称
+    p_ssjc in kg_txsb.ssjc%type,--所属机场
+    p_tckfsj in kg_txsb.tckfsj%type,--投产开放时间
+    p_sl in kg_txsb.sl%type,--数量
+    p_sbzt in kg_txsb.sbzt%type,--设备状态
+    p_sbsccj in kg_txsb.sbsccj%type,--设备生产厂家
+    p_sbccbh in kg_txsb.sbccbh%type,--设备出场编号
+    p_sbxkzsc in kg_txsb.sbxkzsc%type,--设备许可证上传
+    p_yt in kg_txsb.yt%type,--用途
+    p_jlgd in kg_txsb.jlgd%type,--交流供电
+    p_jlgddx in kg_txsb.jlgddx%type,--交流供电大小
+    p_jlgdsl in kg_txsb.jlgdsl%type,--交流供电数量
+    p_zlgd in kg_txsb.zlgd%type,--直流供电
+    p_zlgddx in kg_txsb.zlgddx%type,--直流供电大小
+    p_zlgdsl in kg_txsb.zlgdsl%type,--直流供电数量
+    p_bhqfw in kg_txsb.bhqfw%type,--保护区范围
+    p_sbcsqk in kg_txsb.sbcsqk%type,--设备传输情况
+    p_sbflpz in kg_txsb.sbflpz%type,--设备防雷设置
+    p_zt in kg_txsb.zt%type,--状态
+    p_xssjc in kg_txsb.xssjc%type,--现所属机场
+    p_dbsj in kg_txsb.dbsj%type,--调拨时间
+    p_sbbgr in kg_txsb.sbbgr%type,--设备保管人
+    p_yyjly_xyyhs in kg_txsb.yyjly_xyyhs%type,--语音记录仪_现有用户数
+    p_yyjly_yyxds in kg_txsb.yyjly_yyxds%type,--语音记录仪_语音信道数
+    p_yyjly_sjxds in kg_txsb.yyjly_sjxds%type,--语音记录仪_数据信道数
+    p_wxdmzxt_zdlx in kg_txsb.wxdmzxt_zdlx%type,--卫星地面站系统_站点类型
+    p_wxdmzxt_txkj in kg_txsb.wxdmzxt_txkj%type,--卫星地面站系统_天线口径
+    p_wxdmzxt_swdygl in kg_txsb.wxdmzxt_swdygl%type,--卫星地面站系统_室外单元功率
+    p_wxdmzxt_fspl in kg_txsb.wxdmzxt_fspl%type,--卫星地面站系统_发射频率
+    p_wxdmzxt_jspl in kg_txsb.wxdmzxt_jspl%type,--卫星地面站系统_接收频率
+    p_wxdmzxt_xds in kg_txsb.wxdmzxt_xds%type,--卫星地面站系统_信道数
+    p_wxdmzxt_tzzb_bj54_jd in kg_txsb.wxdmzxt_tzzb_bj54_jd%type,--卫星地面站系统_台站坐标（北京54）经度
+    p_wxdmzxt_tzzb_bj54_wd in kg_txsb.wxdmzxt_tzzb_bj54_wd%type,--卫星地面站系统_台站坐标（北京54）纬度
+    p_wxdmzxt_tzzb_wgs84_jd in kg_txsb.wxdmzxt_tzzb_wgs84_jd%type,--卫星地面站系统_台站坐标（wgs54)经度
+    p_wxdmzxt_tzzb_wgs84_wd in kg_txsb.wxdmzxt_tzzb_wgs84_wd%type,--卫星地面站系统_台站坐标（wgs54)纬度
+    p_wxdmzxt_txszdd in kg_txsb.wxdmzxt_txszdd%type,--卫星地面站系统_天线设置地点
+    p_wxdmzxt_txjcgc in kg_txsb.wxdmzxt_txjcgc%type,--卫星地面站系统_天线基础高程
+    p_wxdmzxt_wxdtzzyxq in kg_txsb.wxdmzxt_wxdtzzyxq%type,--卫星地面站系统_无线电台执照有效期
+    p_wxdmzxt_sc in kg_txsb.wxdmzxt_sc%type,--卫星地面站系统_上传
+    p_sgpdktxxt_sbpz in kg_txsb.sgpdktxxt_sbpz%type,--甚高频地空通信系统_设备配置
+    p_sgpdktxxt_sbxds in kg_txsb.sgpdktxxt_sbxds%type,--甚高频地空通信系统_设备信道数
+    p_sgpdktxxt_txlx in kg_txsb.sgpdktxxt_txlx%type,--甚高频地空通信系统_天线类型
+    p_sgpdktxxt_tcjfrq in kg_txsb.sgpdktxxt_tcjfrq%type,--甚高频地空通信系统_投产校飞日期
+    p_sgpdktxxt_fspl in kg_txsb.sgpdktxxt_fspl%type,--甚高频地空通信系统_发射频率
+    p_sgpdktxxt_scgl in kg_txsb.sgpdktxxt_scgl%type,--甚高频地空通信系统_输出功率
+    p_sgpdktxxt_csfs in kg_txsb.sgpdktxxt_csfs%type,--甚高频地空通信系统_传输方式
+    p_sgpdktxxt_sc in kg_txsb.sgpdktxxt_sc%type,--甚高频地空通信系统_上传
+    p_sgpdktxxt_tzzb_bj54_jd in kg_txsb.sgpdktxxt_tzzb_bj54_jd%type,--甚高频地空通信系统_台站坐标（北京54）经度
+    p_sgpdktxxt_tzzb_bj54_wd in kg_txsb.sgpdktxxt_tzzb_bj54_wd%type,--甚高频地空通信系统_台站坐标（北京54）纬度
+    p_sgpdktxxt_tzzb_wgs84_jd in kg_txsb.sgpdktxxt_tzzb_wgs84_jd%type,--甚高频地空通信系统_台站坐标（wgs84）经度
+    p_sgpdktxxt_tzzb_wgs84_wd in kg_txsb.sgpdktxxt_tzzb_wgs84_wd%type,--甚高频地空通信系统_台站坐标（wgs84）纬度
+    p_sgpdktxxt_txjcgc in kg_txsb.sgpdktxxt_txjcgc%type,--甚高频地空通信系统_天线基础高程
+    p_sgpdktxxt_txgd in kg_txsb.sgpdktxxt_txgd%type,--甚高频地空通信系统_天线高度
+    p_sgpdktxxt_txszdd in kg_txsb.sgpdktxxt_txszdd%type,--甚高频地空通信系统_天线设置地点
+    p_sgpdktxxt_wxdtzzyxq in kg_txsb.sgpdktxxt_wxdtzzyxq%type,--甚高频地空通信系统_无线电台执照有效期
+    p_sgpdktxxt_txsccj in kg_txsb.sgpdktxxt_txsccj%type,--甚高频地空通信系统_天线生产厂家
+    p_sgpdktxxt_txxh_lx in kg_txsb.sgpdktxxt_txxh_lx%type,--甚高频地空通信系统_天线型号/类型
+    p_yyjhxt_nh_xtpz in kg_txsb.yyjhxt_nh_xtpz%type,--语音交换系统（内话）_系统配置
+    p_yyjhxt_nh_xwjtpz in kg_txsb.yyjhxt_nh_xwjtpz%type,--语音交换系统（内话）_席位具体配置
+    p_yyjhxt_nh_xtrjbb in kg_txsb.yyjhxt_nh_xtrjbb%type,--语音交换系统（内话）_系统软件版本
+    p_yyjhxt_nh_jksl_yx in kg_txsb.yyjhxt_nh_jksl_yx%type,--语音交换系统（内话）_接口数量有线
+    p_yyjhxt_nh_jksl_wx in kg_txsb.yyjhxt_nh_jksl_wx%type,--语音交换系统（内话）_接口数量无线
+    p_yyjhxt_nh_MFCxy in kg_txsb.yyjhxt_nh_MFCxy%type,--语音交换系统（内话）_MFC协议
+    p_yyjhxt_nh_QSIGxy in kg_txsb.yyjhxt_nh_QSIGxy%type,--语音交换系统（内话）_Q-SIG协议 
+    p_yyjhxt_nh_IPxy in kg_txsb.yyjhxt_nh_IPxy%type,--语音交换系统（内话）_IP协议
+    p_zdzbxt_xtpz in kg_txsb.zdzbxt_xtpz%type,--自动转报系统_系统配置
+    p_zdzbxt_xtrjbb in kg_txsb.zdzbxt_xtrjbb%type,--自动转报系统_系统软件版本
+    p_zdzbxt_zyxt in kg_txsb.zdzbxt_zyxt%type,--自动转报系统_在用系统
+    p_zdzbxt_zdyhlb in kg_txsb.zdzbxt_zdyhlb%type,--自动转报系统_终端用户列表
+    p_gpdktxxt_sbpz in kg_txsb.gpdktxxt_sbpz%type,--高频地空通信系统设备配置
+    p_gpdktxxt_sbxds in kg_txsb.gpdktxxt_sbxds%type,--高频地空通信系统_设备信道数
+    p_gpdktxxt_txlx in kg_txsb.gpdktxxt_txlx%type,--高频地空通信系统_天线类型
+    p_gpdktxxt_tcjfrq in kg_txsb.gpdktxxt_tcjfrq%type,--高频地空通信系统_投产校飞日期
+    p_gpdktxxt_fspl in kg_txsb.gpdktxxt_fspl%type,--高频地空通信系统_发射频率
+    p_gpdktxxt_scgl in kg_txsb.gpdktxxt_scgl%type,--高频地空通信系统_输出功率
+    p_gpdktxxt_csfs in kg_txsb.gpdktxxt_csfs%type,--高频地空通信系统_传输方式
+    p_gpdktxxt_sc in kg_txsb.gpdktxxt_sc%type,--高频地空通信系统_上传
+    p_gpdktxxt_tzzb_bj54_jd in kg_txsb.gpdktxxt_tzzb_bj54_jd%type,--高频地空通信系统_台站坐标（北京54）经度
+    p_gpdktxxt_tzzb_bj54_wd in kg_txsb.gpdktxxt_tzzb_bj54_wd%type,--高频地空通信系统_台站坐标（北京54）纬度
+    p_gpdktxxt_tzzb_wgs84_jd in kg_txsb.gpdktxxt_tzzb_wgs84_jd%type,--高频地空通信系统_台站坐标（wgs84）经度
+    p_gpdktxxt_tzzb_wgs84_wd in kg_txsb.gpdktxxt_tzzb_wgs84_wd%type,--高频地空通信系统_台站坐标（wgs84）纬度
+    p_gpdktxxt_txjcgc in kg_txsb.gpdktxxt_txjcgc%type,--高频地空通信系统_天线基础高程
+    p_gpdktxxt_txgd in kg_txsb.gpdktxxt_txgd%type,--高频地空通信系统_天线高度
+    p_gpdktxxt_txszdd in kg_txsb.gpdktxxt_txszdd%type,--高频地空通信系统_天线设置地点
+    p_gpdktxxt_wxdtzzyxq in kg_txsb.gpdktxxt_wxdtzzyxq%type,--高频地空通信系统_无线电台执照有效期
+    p_gpdktxxt_txsccj in kg_txsb.gpdktxxt_txsccj%type,--高频地空通信系统_天线生产厂家
+    p_gpdktxxt_txxh_lx in kg_txsb.gpdktxxt_txxh_lx%type,--高频地空通信系统_天线型号/类型
+    p_errorCode out integer
+    
+  );
+-------------------------------------
+--创建人：李海军
+--创建时间：2018年4月13日 09:47:43
+--功能描述：更新通信设备
+---------------------- --------------
+  Procedure Update_TXSB
+  (
+    
+    p_sbbh in kg_txsb.sbbh%type,--设备编号
+    p_sblx in kg_txsb.sblx%type,--设备类型
+    p_tzmc in kg_txsb.tzmc%type,--台站名称
+    p_ssjc in kg_txsb.ssjc%type,--所属机场
+    p_tckfsj in kg_txsb.tckfsj%type,--投产开放时间
+    p_sl in kg_txsb.sl%type,--数量
+    p_sbzt in kg_txsb.sbzt%type,--设备状态
+    p_sbsccj in kg_txsb.sbsccj%type,--设备生产厂家
+    p_sbccbh in kg_txsb.sbccbh%type,--设备出场编号
+    p_sbxkzsc in kg_txsb.sbxkzsc%type,--设备许可证上传
+    p_yt in kg_txsb.yt%type,--用途
+    p_jlgd in kg_txsb.jlgd%type,--交流供电
+    p_jlgddx in kg_txsb.jlgddx%type,--交流供电大小
+    p_jlgdsl in kg_txsb.jlgdsl%type,--交流供电数量
+    p_zlgd in kg_txsb.zlgd%type,--直流供电
+    p_zlgddx in kg_txsb.zlgddx%type,--直流供电大小
+    p_zlgdsl in kg_txsb.zlgdsl%type,--直流供电数量
+    p_bhqfw in kg_txsb.bhqfw%type,--保护区范围
+    p_sbcsqk in kg_txsb.sbcsqk%type,--设备传输情况
+    p_sbflpz in kg_txsb.sbflpz%type,--设备防雷设置
+    p_zt in kg_txsb.zt%type,--状态
+    p_xssjc in kg_txsb.xssjc%type,--现所属机场
+    p_dbsj in kg_txsb.dbsj%type,--调拨时间
+    p_sbbgr in kg_txsb.sbbgr%type,--设备保管人
+    p_yyjly_xyyhs in kg_txsb.yyjly_xyyhs%type,--语音记录仪_现有用户数
+    p_yyjly_yyxds in kg_txsb.yyjly_yyxds%type,--语音记录仪_语音信道数
+    p_yyjly_sjxds in kg_txsb.yyjly_sjxds%type,--语音记录仪_数据信道数
+    p_wxdmzxt_zdlx in kg_txsb.wxdmzxt_zdlx%type,--卫星地面站系统_站点类型
+    p_wxdmzxt_txkj in kg_txsb.wxdmzxt_txkj%type,--卫星地面站系统_天线口径
+    p_wxdmzxt_swdygl in kg_txsb.wxdmzxt_swdygl%type,--卫星地面站系统_室外单元功率
+    p_wxdmzxt_fspl in kg_txsb.wxdmzxt_fspl%type,--卫星地面站系统_发射频率
+    p_wxdmzxt_jspl in kg_txsb.wxdmzxt_jspl%type,--卫星地面站系统_接收频率
+    p_wxdmzxt_xds in kg_txsb.wxdmzxt_xds%type,--卫星地面站系统_信道数
+    p_wxdmzxt_tzzb_bj54_jd in kg_txsb.wxdmzxt_tzzb_bj54_jd%type,--卫星地面站系统_台站坐标（北京54）经度
+    p_wxdmzxt_tzzb_bj54_wd in kg_txsb.wxdmzxt_tzzb_bj54_wd%type,--卫星地面站系统_台站坐标（北京54）纬度
+    p_wxdmzxt_tzzb_wgs84_jd in kg_txsb.wxdmzxt_tzzb_wgs84_jd%type,--卫星地面站系统_台站坐标（wgs54)经度
+    p_wxdmzxt_tzzb_wgs84_wd in kg_txsb.wxdmzxt_tzzb_wgs84_wd%type,--卫星地面站系统_台站坐标（wgs54)纬度
+    p_wxdmzxt_txszdd in kg_txsb.wxdmzxt_txszdd%type,--卫星地面站系统_天线设置地点
+    p_wxdmzxt_txjcgc in kg_txsb.wxdmzxt_txjcgc%type,--卫星地面站系统_天线基础高程
+    p_wxdmzxt_wxdtzzyxq in kg_txsb.wxdmzxt_wxdtzzyxq%type,--卫星地面站系统_无线电台执照有效期
+    p_wxdmzxt_sc in kg_txsb.wxdmzxt_sc%type,--卫星地面站系统_上传
+    p_sgpdktxxt_sbpz in kg_txsb.sgpdktxxt_sbpz%type,--甚高频地空通信系统_设备配置
+    p_sgpdktxxt_sbxds in kg_txsb.sgpdktxxt_sbxds%type,--甚高频地空通信系统_设备信道数
+    p_sgpdktxxt_txlx in kg_txsb.sgpdktxxt_txlx%type,--甚高频地空通信系统_天线类型
+    p_sgpdktxxt_tcjfrq in kg_txsb.sgpdktxxt_tcjfrq%type,--甚高频地空通信系统_投产校飞日期
+    p_sgpdktxxt_fspl in kg_txsb.sgpdktxxt_fspl%type,--甚高频地空通信系统_发射频率
+    p_sgpdktxxt_scgl in kg_txsb.sgpdktxxt_scgl%type,--甚高频地空通信系统_输出功率
+    p_sgpdktxxt_csfs in kg_txsb.sgpdktxxt_csfs%type,--甚高频地空通信系统_传输方式
+    p_sgpdktxxt_sc in kg_txsb.sgpdktxxt_sc%type,--甚高频地空通信系统_上传
+    p_sgpdktxxt_tzzb_bj54_jd in kg_txsb.sgpdktxxt_tzzb_bj54_jd%type,--甚高频地空通信系统_台站坐标（北京54）经度
+    p_sgpdktxxt_tzzb_bj54_wd in kg_txsb.sgpdktxxt_tzzb_bj54_wd%type,--甚高频地空通信系统_台站坐标（北京54）纬度
+    p_sgpdktxxt_tzzb_wgs84_jd in kg_txsb.sgpdktxxt_tzzb_wgs84_jd%type,--甚高频地空通信系统_台站坐标（wgs84）经度
+    p_sgpdktxxt_tzzb_wgs84_wd in kg_txsb.sgpdktxxt_tzzb_wgs84_wd%type,--甚高频地空通信系统_台站坐标（wgs84）纬度
+    p_sgpdktxxt_txjcgc in kg_txsb.sgpdktxxt_txjcgc%type,--甚高频地空通信系统_天线基础高程
+    p_sgpdktxxt_txgd in kg_txsb.sgpdktxxt_txgd%type,--甚高频地空通信系统_天线高度
+    p_sgpdktxxt_txszdd in kg_txsb.sgpdktxxt_txszdd%type,--甚高频地空通信系统_天线设置地点
+    p_sgpdktxxt_wxdtzzyxq in kg_txsb.sgpdktxxt_wxdtzzyxq%type,--甚高频地空通信系统_无线电台执照有效期
+    p_sgpdktxxt_txsccj in kg_txsb.sgpdktxxt_txsccj%type,--甚高频地空通信系统_天线生产厂家
+    p_sgpdktxxt_txxh_lx in kg_txsb.sgpdktxxt_txxh_lx%type,--甚高频地空通信系统_天线型号/类型
+    p_yyjhxt_nh_xtpz in kg_txsb.yyjhxt_nh_xtpz%type,--语音交换系统（内话）_系统配置
+    p_yyjhxt_nh_xwjtpz in kg_txsb.yyjhxt_nh_xwjtpz%type,--语音交换系统（内话）_席位具体配置
+    p_yyjhxt_nh_xtrjbb in kg_txsb.yyjhxt_nh_xtrjbb%type,--语音交换系统（内话）_系统软件版本
+    p_yyjhxt_nh_jksl_yx in kg_txsb.yyjhxt_nh_jksl_yx%type,--语音交换系统（内话）_接口数量有线
+    p_yyjhxt_nh_jksl_wx in kg_txsb.yyjhxt_nh_jksl_wx%type,--语音交换系统（内话）_接口数量无线
+    p_yyjhxt_nh_MFCxy in kg_txsb.yyjhxt_nh_MFCxy%type,--语音交换系统（内话）_MFC协议
+    p_yyjhxt_nh_QSIGxy in kg_txsb.yyjhxt_nh_QSIGxy%type,--语音交换系统（内话）_Q-SIG协议 
+    p_yyjhxt_nh_IPxy in kg_txsb.yyjhxt_nh_IPxy%type,--语音交换系统（内话）_IP协议
+    p_zdzbxt_xtpz in kg_txsb.zdzbxt_xtpz%type,--自动转报系统_系统配置
+    p_zdzbxt_xtrjbb in kg_txsb.zdzbxt_xtrjbb%type,--自动转报系统_系统软件版本
+    p_zdzbxt_zyxt in kg_txsb.zdzbxt_zyxt%type,--自动转报系统_在用系统
+    p_zdzbxt_zdyhlb in kg_txsb.zdzbxt_zdyhlb%type,--自动转报系统_终端用户列表
+    p_gpdktxxt_sbpz in kg_txsb.gpdktxxt_sbpz%type,--高频地空通信系统设备配置
+    p_gpdktxxt_sbxds in kg_txsb.gpdktxxt_sbxds%type,--高频地空通信系统_设备信道数
+    p_gpdktxxt_txlx in kg_txsb.gpdktxxt_txlx%type,--高频地空通信系统_天线类型
+    p_gpdktxxt_tcjfrq in kg_txsb.gpdktxxt_tcjfrq%type,--高频地空通信系统_投产校飞日期
+    p_gpdktxxt_fspl in kg_txsb.gpdktxxt_fspl%type,--高频地空通信系统_发射频率
+    p_gpdktxxt_scgl in kg_txsb.gpdktxxt_scgl%type,--高频地空通信系统_输出功率
+    p_gpdktxxt_csfs in kg_txsb.gpdktxxt_csfs%type,--高频地空通信系统_传输方式
+    p_gpdktxxt_sc in kg_txsb.gpdktxxt_sc%type,--高频地空通信系统_上传
+    p_gpdktxxt_tzzb_bj54_jd in kg_txsb.gpdktxxt_tzzb_bj54_jd%type,--高频地空通信系统_台站坐标（北京54）经度
+    p_gpdktxxt_tzzb_bj54_wd in kg_txsb.gpdktxxt_tzzb_bj54_wd%type,--高频地空通信系统_台站坐标（北京54）纬度
+    p_gpdktxxt_tzzb_wgs84_jd in kg_txsb.gpdktxxt_tzzb_wgs84_jd%type,--高频地空通信系统_台站坐标（wgs84）经度
+    p_gpdktxxt_tzzb_wgs84_wd in kg_txsb.gpdktxxt_tzzb_wgs84_wd%type,--高频地空通信系统_台站坐标（wgs84）纬度
+    p_gpdktxxt_txjcgc in kg_txsb.gpdktxxt_txjcgc%type,--高频地空通信系统_天线基础高程
+    p_gpdktxxt_txgd in kg_txsb.gpdktxxt_txgd%type,--高频地空通信系统_天线高度
+    p_gpdktxxt_txszdd in kg_txsb.gpdktxxt_txszdd%type,--高频地空通信系统_天线设置地点
+    p_gpdktxxt_wxdtzzyxq in kg_txsb.gpdktxxt_wxdtzzyxq%type,--高频地空通信系统_无线电台执照有效期
+    p_gpdktxxt_txsccj in kg_txsb.gpdktxxt_txsccj%type,--高频地空通信系统_天线生产厂家
+    p_gpdktxxt_txxh_lx in kg_txsb.gpdktxxt_txxh_lx%type,--高频地空通信系统_天线型号/类型
+    p_errorCode out integer
+  );
+-------------------------------------
+--创建人：李海军
+--创建时间：2018年4月13日 09:47:43
+--功能描述：删除通信设备
+---------------------- --------------
+  Procedure Delete_TXSB
+  (
+  p_sbbh in kg_txsb.sbbh%type, 
+  p_errorCode out integer
+);

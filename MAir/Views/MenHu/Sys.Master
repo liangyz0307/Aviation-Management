@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Sys.master.cs" Inherits="CUST.Web.MengHu.main.Sys" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=8"/>
+    <link rel="stylesheet" type="text/css" href="../../Content/css/ext-all.css"/>
+    <link type="text/css" rel="stylesheet" href="../../Content/css/main.css">
+    <link type="text/css" rel="stylesheet" href="../../Content/css/xtheme.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Content/css/highslide.css"/>
+    <!--[if lt IE 7]>
+    <link rel="stylesheet" type="text/css" href="highslide/highslide-ie6.css" />
+    <![endif]-->	
+    <title>欢迎访问龙嘉机场信息门户</title>
+    
+   <link rel="stylesheet" type="text/css" href="../../Content/css/gadget.css"/>
+   <link rel="stylesheet" type="text/css" href="../../Content/css/webClipping.css"/>
+   <link rel="stylesheet" type="text/css" href="../../Content/css/consultings.css"/>
+   <link rel="stylesheet" type="text/css" href="../../Content/css/rss.css"/>
+   <link rel="stylesheet" type="text/css" href="../../Content/css/personalInfo.css"/>
+    <%--   日历引用--%>
+      <script  type="text/javascript" src="../../Content/js/jquery-1.8.3.min.js"></script>
+      <link rel="stylesheet" href="../../Content/css/index.css"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body class="ext-webkit ext-chrome" runat="server">
+
+<div id="container" >
+<div id="header">
+	<a id="logo">
+        <img src="../../Content/images/beijingg.jpg" style="width:100%" />
+	</a>
+<div id="header-bottom" >
+	<div id="top-nav-wrapper" style="left:-25px;  width: 980px;">
+		<ul id="topnav" style="right: 0px;">
+					<li class="first-level current" id="pp781" >
+						<a class="first-level" href="Sys_Index.aspx"><span style="font-weight:500;">首页</span></a>
+					</li>
+				
+                    <li class="first-level " id="Li1">
+						<%--<a class="first-level" href="http://210.47.0.178/TEST/INDEX.ASP">--%><a class="first-level" href="#"><span>主站</span></a>
+					</li>
+                 	<li class="first-level " id="pp89795">
+						<a class="first-level" href="GongGao.aspx"><span>通知公告</span></a>
+					</li>
+					<li class="first-level " id="pp105478">
+						<a class="first-level" href="PersonPwdXG.aspx"><span>修改密码</span></a>
+					</li>
+            	   <li class="first-level " id="pp105479">
+						<a class="first-level" href="../../Views/MenHu/GRXX.aspx?ygbh=<%#Eval("ygbh") %>"><span>个人信息</span></a>
+					</li>
+                 <%--   <li class="first-level " id="pp105480">--%>
+<%--                        <a href="mailto:aaa@5icool.org?subject=ccc&body=xxx%0d%0ayyy">aaa</a>--%>
+						<%--<a class="first-level" href="mailto:"><span>邮件</span></a>--%>
+					<%--</li>--%>
+                    <li class="first-level " id="pp105482">
+						<a class="first-level" href="../../Views/MenHu/GRJX_ZS.aspx"><span>个人绩效</span></a>
+					</li>
+                   <li class="first-level " id="pp105481">
+					   <asp:Label ID="Label1" runat="server"  style="width:220px" ></asp:Label>
+					</li>
+		           
+                   <li class="first-level " id="welcomeMsg" >
+                       <asp:Label ID="lbl" runat="server"  Text="欢迎您：	"></asp:Label>
+					<asp:Label ID="lbl_mz" runat="server"  Text=""></asp:Label>
+
+                   </li>
+				   <li class="first-level " id="pp1054780" >
+						<a class="first-level" href="../../Login.aspx"><span>退出登录</span></a>
+					</li>
+                  
+		</ul>
+        
+	</div>
+</div>
+		
+</div>
+    <div class="main" style="height:855px">
+            <asp:ContentPlaceHolder ID="kg_content" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+<div id="footer" style="margin-top:50px;"> 
+    <div id="footerMsg" style="background-color:#3f6eb3;">
+      <div style="color:white;font-size:15px;" > Copyright&copy;吉林省民航机场集团公司</div>
+    </div>
+</div>
+    </div>
+</body>
+</html>

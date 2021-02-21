@@ -1,0 +1,96 @@
+ #region =============用户部门权限===================
+        private static DataTable dt_yhbmqx = Select_BMQX_ALLYH();
+        private static DataTable Select_BMQX_ALLYH()
+        {
+            DataTable dt = new DataTable();
+            DBClass db_yhqx = new DBClass();
+            try
+            {
+                OracleParameter[] paras_qx = {
+                            new OracleParameter("p_cur", OracleType.Cursor)
+                        };
+                paras_qx[0].Direction = ParameterDirection.Output;
+                dt = db_yhqx.RunProcedure("PACK_KG_YHJS.Select_BMQX_ALLYH", paras_qx, "table").Tables[0];
+                return dt;
+            }
+            finally
+            {
+                db_yhqx.Close();
+            }
+        }
+        #endregion
+        //查询用户部门权限
+        public static bool HasThisBMQX(int yhid, string qxdm)
+        {
+            if (dt_yhbmqx.Rows.Count == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return dt_yhbmqx.Select("yhid=" + yhid + "and qxdm=" + qxdm).Length > 0 ? true : false;
+            }
+        }
+        //查询该用户下有无角色（判断是否为普通员工）
+        public static bool HasThisBMQX(int yhid)
+        {
+            if (dt_yhbmqx.Rows.Count == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return dt_yhbmqx.Select("yhid=" + yhid ).Length > 0 ? true : false;
+            }
+        }
+        //查询用户部门权限
+        public static bool HasThisBMQX(int yhid, string bmdm, string qxdm)
+        {
+            if (dt_yhbmqx.Rows.Count == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return dt_yhbmqx.Select("yhid=" + yhid + "and  bmdm=" + bmdm + "and qxdm=" + qxdm).Length > 0 ? true : false;
+            }
+        }
+
+        #endregion
+
+
+
+
+
+public static DataTable BM(string qxdm, int userId)
+        {
+            return InitBMData(qxdm, userId);
+        }
+
+
+
+ private static DataTable InitBMData(string qxdm,int userId)
+        {
+            lock (typeof(SysData))
+            {
+                DBClass dbc = new DBClass();
+                try
+                {
+                    OracleParameter[] opara ={
+                                             new OracleParameter("p_qxdm",OracleType.VarChar),
+                                             new OracleParameter("p_userId",OracleType.Int32),
+                                             new OracleParameter("p_cur",OracleType.Cursor)
+                                         };
+
+                    opara[0].Value = qxdm;
+                    opara[1].Value = userId;
+                    opara[2].Direction = ParameterDirection.Output;
+                    DataSet ds = dbc.RunProcedure("PACK_HTGL_BMGW.Select_BM_BY_BMQX_YHID", opara, "table");
+                    return ds.Tables[0];
+                }
+                finally
+                {
+                    dbc.Close();
+                }
+            }
+        }

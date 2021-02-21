@@ -1,0 +1,35 @@
+select ROWNUM 序号,TB.COLUMN_NAME 字段名,TB.DATA_TYPE||'('||TB.DATA_LENGTH||')' 字段类型,case(TB.NULLABLE) when 'Y' then 'NOT NULL' else 'NOT NULL' end 允许NULL, '' 默认值,TB.COMMENTS 字段意义,'' 注释 from
+(select 
+      user_tab_columns.COLUMN_NAME,--字段名称
+      user_col_comments.COMMENTS,
+      user_tab_columns.DATA_TYPE,--字典类型
+      user_tab_columns.DATA_LENGTH,--字典长度
+     user_tab_columns. NULLABLE--是否为空
+from user_tab_columns left join user_col_comments on user_tab_columns.TABLE_NAME=user_col_comments.TABLE_NAME and user_col_comments.column_name =user_tab_columns.COLUMN_NAME
+where user_tab_columns.Table_Name='SBGL_DHSB')TB;
+
+设备状态:
+字典表（1：在用 2：未开放 3：关闭
+4：闲置 5：报废）
+
+所属机场：
+字典表（01：长春 02：延吉 03：长白山
+04：通化 05：白城）
+
+字典表（01：待提交02：待初审03：待终审
+04：通过 05：审核未通过）
+
+字典表(01：长春导航保障部 02：延吉航务保障部 03：长白山航务保障部
+ 04：通化航务保障部 05：白城航务保障部 06：综合办公室 
+07：航务管理部-部门领导 08：气象 09：通导 10：航管)
+
+设备用途：
+字典表（0：主用 1：备用 2：军用
+3：其他）
+字典表（0101：数据链  0102：数据通信  0103：语音记录仪  0104：卫星地面站系统  0105：甚高频地空通信系统
+0106：语音交换系统  0107：自动转报系统 0108：高频地空通信系统 0201：卫星导航地面设备 
+0202：航向设备 0203：下滑设备 0204：测距仪 0205：全向信标 0206：无方向信标 0207：指点信标
+0301：一级雷达 0302：二级雷达 0303：场面监视设备 0304：自动相关监视系统设备(ADSB) 0305：多点定位系统
+0306：自动化系统 0307：空中交通管制自动化系统）
+
+字典表(01：通信 02：导航 03：气象)

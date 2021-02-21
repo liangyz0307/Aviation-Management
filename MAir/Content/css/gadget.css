@@ -1,0 +1,80 @@
+.search-box {
+    float: left;
+}
+
+.search-box li {
+    padding: 5px;
+}
+
+.search-box label {
+    font-weight: bold;
+    color: #666;
+    padding-right: 10px;
+}
+
+.weather-content {
+    margin: 5px 0;
+}
+
+.weather-content li {
+    float: left;
+    text-align: center;
+    padding: 0 5px;
+}
+
+.weather-content img {
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+.weather-city {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.flight-table {
+
+}
+
+.flight-table td {
+    vertical-align: middle;
+    padding: 2px 5px;
+}
+
+.flight-table select {
+    width: 130px;
+}
+
+.bus-route{
+    padding:0 5px;
+}
+
+.bus-route-title {
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+}
+.bus-route-des{
+    padding:2px 5px;
+    color:#999;
+}
+.bus-route-station{
+    padding:2px 4px;
+}
+
+.translate-box{
+    margin:10px;
+    padding:5px;
+}
+.translate-text{
+    width:100%;
+    border:1px solid #aaa;
+    height:80px;
+    padding:2px;
+}
+.translate-result{
+    border:1px solid #bbb;
+    background:#fafafa;
+    padding:5px;
+}

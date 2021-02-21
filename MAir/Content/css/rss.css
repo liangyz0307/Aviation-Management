@@ -1,0 +1,20 @@
+.rss-container {
+    padding: 5px 2px;
+}
+
+.rss-container li {
+    padding: 2px 0 1px 4px;
+}
+.rss-title {
+    zoom:1;
+    vertical-align:baseline;
+}
+
+
+.rss-time {
+    color: #999;
+    font-size: 11px;
+	float: right;
+    width:70px;
+
+}
