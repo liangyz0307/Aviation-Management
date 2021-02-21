@@ -1,0 +1,13 @@
+C:\Users\邓鑫\Desktop\空管\MAir\SPHY\obj\x86\Debug\SPHY.csprojResolveAssemblyReference.cache
+C:\Users\邓鑫\Desktop\空管\MAir\SPHY\obj\x86\Debug\OVCS.BallonForm.resources
+C:\Users\邓鑫\Desktop\空管\MAir\SPHY\obj\x86\Debug\OVCS.LoginForm.resources
+C:\Users\邓鑫\Desktop\空管\MAir\SPHY\obj\x86\Debug\OVCS.MainForm.resources
+C:\Users\邓鑫\Desktop\空管\MAir\SPHY\obj\x86\Debug\OVCS.Properties.Resources.resources
+C:\Users\邓鑫\Desktop\空管\MAir\SPHY\obj\x86\Debug\OVCS.RemoteDesktopPanel.resources
+C:\Users\邓鑫\Desktop\空管\MAir\SPHY\obj\x86\Debug\OVCS.RemotingDesktopForm.resources
+C:\Users\邓鑫\Desktop\空管\MAir\SPHY\obj\x86\Debug\OVCS.SelectGroupForm.resources
+C:\Users\邓鑫\Desktop\空管\MAir\SPHY\obj\x86\Debug\OVCS.SystemSettingForm.resources
+C:\Users\邓鑫\Desktop\空管\MAir\SPHY\obj\x86\Debug\OVCS.TextChatControl.resources
+C:\Users\邓鑫\Desktop\空管\MAir\SPHY\obj\x86\Debug\OVCS.WhiteBoardPanel.resources
+C:\Users\邓鑫\Desktop\空管\MAir\SPHY\obj\x86\Debug\SPHY.csproj.GenerateResource.Cache
+C:\Users\邓鑫\Desktop\空管\MAir\SPHY\bin\Debug\OVCS.exe.config
