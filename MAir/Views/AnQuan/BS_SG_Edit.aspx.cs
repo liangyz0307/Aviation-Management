@@ -106,7 +106,7 @@ namespace CUST.WKG
         }
         protected void btn_fh_Click(object sender, EventArgs e)
         {
-            Response.Redirect("../BaoSong/BS_SG.aspx", true);
+            Response.Redirect("../AnQuan/BS_SG.aspx", true);
         }
         protected void select_detail()
         {
