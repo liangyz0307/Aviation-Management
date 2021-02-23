@@ -40,7 +40,7 @@ namespace CUST.WKG
                 tbx_rqsj.Attributes.Add("readonly", "readonly");
                 Bind();
             }
-
+           
         }
         public void check()
         {
@@ -82,7 +82,7 @@ namespace CUST.WKG
             ddlt_pxsbmdm.DataTextField = "bmmc";
             ddlt_pxsbmdm.DataValueField = "bmdm";
             ddlt_pxsbmdm.DataBind();
-            //   ddlt_pxsbmdm.Items.Insert(0, new ListItem("全部", "-1"));
+         //   ddlt_pxsbmdm.Items.Insert(0, new ListItem("全部", "-1"));
             //岗位代码
             ddlt_pxsgwdm.DataSource = SysData.GW().Copy();
             ddlt_pxsgwdm.DataTextField = "mc";
@@ -106,7 +106,7 @@ namespace CUST.WKG
             ddlt_sjyzbmdm.DataTextField = "bmmc";
             ddlt_sjyzbmdm.DataValueField = "bmdm";
             ddlt_sjyzbmdm.DataBind();
-            // ddlt_sjyzbmdm.Items.Insert(0, new ListItem("全部", "-1"));
+           // ddlt_sjyzbmdm.Items.Insert(0, new ListItem("全部", "-1"));
 
             //岗位代码
             ddlt_sjyzgwdm.DataSource = SysData.GW().Copy();
@@ -130,7 +130,7 @@ namespace CUST.WKG
             ddlt_fzrbmdm.DataTextField = "bmmc";
             ddlt_fzrbmdm.DataValueField = "bmdm";
             ddlt_fzrbmdm.DataBind();
-            //  ddlt_fzrbmdm.Items.Insert(0, new ListItem("全部", "-1"));
+          //  ddlt_fzrbmdm.Items.Insert(0, new ListItem("全部", "-1"));
             //岗位代码
             ddlt_fzrgwdm.DataSource = SysData.GW().Copy();
             ddlt_fzrgwdm.DataTextField = "mc";
@@ -243,25 +243,27 @@ namespace CUST.WKG
                 string gwdm = ddlt_sjyzgwdm.SelectedValue.ToString();
                 string yg = ddlt_sjyz.SelectedValue.ToString();
                 //ddlt_syr.SelectedItem.Text获取下拉框DataTextField值
+                sjyz = "";
                 if (ddlt_sjyz.Items.Count > 0)
                 {
                     tbx_sjyz.Text = ddlt_sjyz.SelectedItem.Text;
                     sjyz = ddlt_sjyz.SelectedValue.ToString();
+                    pxry= ddlt_sjyz.SelectedValue.ToString();
                 }
             }
             else
             {
-                pxry_cs = sjyz + "," + ddlt_sjyz.SelectedValue.ToString();
+                pxry_cs= sjyz + ","+ ddlt_sjyz.SelectedValue.ToString();
                 string[] Arry_pxry = pxry_cs.Split(new char[1] { ',' });
                 if (IsRepeat2(Arry_pxry) == true)
                 {
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"已添加此培训人员，不能重复添加！\")</script>");
                     return;
-                }
+                }   
                 else
                 {
                     tbx_sjyz.Text = tbx_sjyz.Text.ToString() + "," + ddlt_sjyz.SelectedItem.Text;
-                    pxry = sjyz + "," + ddlt_sjyz.SelectedValue.ToString();
+                    pxry = pxry + "," + ddlt_sjyz.SelectedValue.ToString();
                 }
             }
         }
@@ -275,15 +277,11 @@ namespace CUST.WKG
         {
             for (int i = 0; i < array.Length; i++)
             {
-                for (int j = 0; j < array.Length; j++)
+                for (int j = i + 1; j < array.Length; j++)
                 {
-                    if (j <= i)
-                    {
-                        continue;
-                    }
                     if (array[i] == array[j])
                     {
-                        array[j].Remove(0);
+                        array[j].Remove(j);
                         return true;
                     }
                 }
@@ -304,7 +302,7 @@ namespace CUST.WKG
             ddlt_fzr.DataBind();
 
 
-
+            
         }
         protected void ddlt_fzrgwdm_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -361,7 +359,7 @@ namespace CUST.WKG
             }
             //学时
             string xs = tbx_xs.Text.ToString().Trim();
-            if (!Regex.IsMatch(tbx_xs.Text, @"^[0-9]*$") || string.IsNullOrEmpty(xs))
+            if (!Regex.IsMatch(tbx_xs.Text, @"^[0-9]*$")|| string.IsNullOrEmpty(xs))
             {
 
                 Label_xs.Text = "<span style=\"color:#ff0000\">" + "错误，不能为空请输入数字" + "</span>";
@@ -435,7 +433,7 @@ namespace CUST.WKG
             //受教育者
 
             string sjyz = tbx_sjyz.Text.ToString().Trim();
-
+          
             if (string.IsNullOrEmpty(sjyz))
             {
 
@@ -476,7 +474,7 @@ namespace CUST.WKG
 
             //}
             //初审人
-            if (ddlt_csr.SelectedItem.Text.Trim() == "" || ddlt_csr.SelectedValue.Trim() == "-1")
+            if (ddlt_csr.SelectedItem.Text.Trim() == ""|| ddlt_csr.SelectedValue.Trim() == "-1")
             {
 
                 lbl_csr.Text = "<span style=\"color:#ff0000\">" + "请选择" + "</span>";
@@ -488,7 +486,7 @@ namespace CUST.WKG
 
             }
             //终审人
-            if (ddlt_zsr.SelectedItem.Text.Trim() == "" || ddlt_zsr.SelectedValue.Trim() == "-1")
+            if (ddlt_zsr.SelectedItem.Text.Trim() == ""||ddlt_zsr.SelectedValue.Trim() == "-1")
             {
 
                 lbl_zsr.Text = "<span style=\"color:#ff0000\">" + "请选择" + "</span>";
@@ -499,12 +497,12 @@ namespace CUST.WKG
                 lbl_zsr.Text = "<span style=\"color:#00ff00\">" + "正确" + "</span>";
 
             }
-
+            
             if (flag == 1) { return; }
             #endregion
             struct_pxjl.p_type = ddlt_type.SelectedValue.ToString().Trim();//类型
             struct_pxjl.p_rqsj = DateTime.Parse(tbx_rqsj.Text.ToString().Trim());//日期时间
-
+          
             struct_pxjl.p_jxnr = tbx_jxnr.Text.ToString().Trim();
             struct_pxjl.p_xs = tbx_xs.Text.ToString().Trim();//学时
             struct_pxjl.p_ks = tbx_ks.Text.ToString().Trim();//课时
@@ -513,7 +511,7 @@ namespace CUST.WKG
             struct_pxjl.p_khfs = tbx_khfs.Text.ToString().Trim();//考核方式
             struct_pxjl.p_khjg = ddlt_khjg.Text.ToString().Trim();//考核结果
 
-
+        
             //struct_pxjl.p_sjyz = ddlt_sjyz.SelectedValue.ToString().Trim();//受教育者
             struct_pxjl.p_fzr = ddlt_fzr.SelectedValue.ToString().Trim();//负责人
 
@@ -545,15 +543,15 @@ namespace CUST.WKG
 
             struct_pxjl.p_czfs = "01";
             struct_pxjl.p_czxx = "位置：员工->培训记录->添加 " + struct_pxjl.p_type + "事件类型：" + struct_pxjl.p_bmdm + "负责人部门："
-                + struct_pxjl.p_rqsj + "日期类型：" + struct_pxjl.p_xs + "教学内容" + struct_pxjl.p_ks + "学时" + struct_pxjl.p_jxnr
+                + struct_pxjl.p_rqsj + "日期类型：" + struct_pxjl.p_xs + "教学内容" + struct_pxjl.p_ks + "学时" + struct_pxjl.p_jxnr 
                 + "课时：" + struct_pxjl.p_jb + "级别：" + struct_pxjl.p_pxs + "培训师： " + struct_pxjl.p_khfs + "考核方式" + struct_pxjl.p_khjg
                 + "考核结果：" + struct_pxjl.p_sjyz + "受教育者：" + struct_pxjl.p_fzr + "负责人：";
-
-            //           string[] Arry_tx = pxry.Split(new char[1] { ',' });
-            //           int i = Arry_tx.Length;
-            if (pxry == null)
+           
+ //           string[] Arry_tx = pxry.Split(new char[1] { ',' });
+ //           int i = Arry_tx.Length;
+            if (pxry == null )
             {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"受教育者不少于2人！\")</script>");
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"培训人员不得少于2人！\")</script>");
             }
             else
             {
@@ -621,8 +619,8 @@ namespace CUST.WKG
                 Server.ClearError();
             }
 
-
+           
         }
-
+       
     }
 }
