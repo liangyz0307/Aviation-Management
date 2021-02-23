@@ -120,45 +120,51 @@ namespace CUST.WKG
                 string zbld = dr["zbld"].ToString();
                 string[] zblds = zbld.Split(',');
                 dr["zbld"] = "";
-                for (int n = 0; n < zblds.Length - 1; n++)
+                for (int n = 0; n < zblds.Length-1; n++)
                 {
                     dr["zbld"] += cbsgl.Select_YGXMbyBH(zblds[n]).Rows[0]["xm"].ToString() + ' ';
                 }
-                string ttzb = dr["ttzb"].ToString();
-                string[] ttzbs = ttzb.Split(',');
+               
+                //塔台值班
+                string[] Array_ttzb = dr["ttzb"].ToString().Split(',');
                 dr["ttzb"] = "";
-                for (int n = 0; n < ttzbs.Length - 1; n++)
+                foreach (string dhbzs_bh in Array_ttzb)
                 {
-                    dr["ttzb"] += cbsgl.Select_YGXMbyBH(ttzbs[n]).Rows[0]["xm"].ToString() + ' ';
+                    dr["ttzb"] += cbsgl.Select_YGXMbyBH(dhbzs_bh.ToString()).Rows[0][0].ToString()+" ";                   
                 }
-                string zdzb = dr["zdzb"].ToString();
-                string[] zdzbs = zdzb.Split(',');
+         
+                //站调值班               
+                string[] Array_zdzb = dr["zdzb"].ToString().Split(',');
                 dr["zdzb"] = "";
-                for (int n = 0; n < zdzbs.Length - 1; n++)
+                foreach (string zdzb_bh in Array_zdzb)
                 {
-                    dr["zdzb"] += cbsgl.Select_YGXMbyBH(zdzbs[n]).Rows[0]["xm"].ToString() + ' ';
+                    dr["zdzb"] += cbsgl.Select_YGXMbyBH(zdzb_bh.ToString()).Rows[0]["xm"].ToString() + ' ';
                 }
-                string tdzb = dr["tdzb"].ToString();
-                string[] tdzbs = tdzb.Split(',');
-                dr["tdzb"] = "";
-                for (int n = 0; n < tdzbs.Length - 1; n++)
+
+                //通导值班
+                string[] Array_tdzb = dr["tdzb"].ToString().Split(',');
+                dr["tdzb"] = "";             
+                foreach (string tdzb_bh in Array_tdzb)
                 {
-                    dr["tdzb"] += cbsgl.Select_YGXMbyBH(tdzbs[n]).Rows[0]["xm"].ToString() + ' ';
+                    dr["tdzb"] += cbsgl.Select_YGXMbyBH(tdzb_bh.ToString()).Rows[0]["xm"].ToString() + ' ';
                 }
-                string qxyb = dr["qxyb"].ToString();
-                string[] qxybs = qxyb.Split(',');
+
+                //气象预报
+                string[] Array_qxyb = dr["qxyb"].ToString().Split(',');
                 dr["qxyb"] = "";
-                for (int n = 0; n < qxybs.Length - 1; n++)
+                foreach (string qxyb_bh in Array_ttzb)
                 {
-                    dr["qxyb"] += cbsgl.Select_YGXMbyBH(qxybs[n]).Rows[0]["xm"].ToString() + ' ';
+                    dr["qxyb"] += cbsgl.Select_YGXMbyBH(qxyb_bh.ToString()).Rows[0]["xm"].ToString() + ' ';
                 }
-                string gc = dr["gc"].ToString();
-                string[] gcs = gc.Split(',');
+
+                //观测
+                string[] Array_gc = dr["gc"].ToString().Split(',');
                 dr["gc"] = "";
-                for (int n = 0; n < gcs.Length - 1; n++)
+                foreach (string gc_bh in Array_ttzb)
                 {
-                    dr["gc"] += cbsgl.Select_YGXMbyBH(gcs[n]).Rows[0]["xm"].ToString() + ' ';
+                    dr["gc"] += cbsgl.Select_YGXMbyBH(gc_bh.ToString()).Rows[0]["xm"].ToString() + ' ';
                 }
+
                 dt_rq = Convert.ToDateTime(dr["rq"].ToString());
                 dr["rqmc"] = string.Format("{0:yyyy-MM-dd}", dt_rq);
             }

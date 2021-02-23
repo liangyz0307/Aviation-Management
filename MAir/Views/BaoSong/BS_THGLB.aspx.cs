@@ -124,41 +124,85 @@ namespace CUST.WKG
                 {
                     dr["zbld"] += thgl.Select_YGXMbyBH(zblds[n]).Rows[0]["xm"].ToString() + ' ';
                 }
-                string ttzb = dr["ttzb"].ToString();
-                string[] ttzbs = ttzb.Split(',');
+
+
+
+                /* string ttzb = dr["ttzb"].ToString();
+                 string[] ttzbs = ttzb.Split(',');
+                 dr["ttzb"] = "";
+                 for (int n = 0; n < ttzbs.Length - 1; n++)
+                 {
+                     dr["ttzb"] += thgl.Select_YGXMbyBH(ttzbs[n]).Rows[0]["xm"].ToString() + ' ';
+                 }
+                 string zdzb = dr["zdzb"].ToString();
+                 string[] zdzbs = zdzb.Split(',');
+                 dr["zdzb"] = "";
+                 for (int n = 0; n < zdzbs.Length - 1; n++)
+                 {
+                     dr["zdzb"] += thgl.Select_YGXMbyBH(zdzbs[n]).Rows[0]["xm"].ToString() + ' ';
+                 }
+                 string tdzb = dr["tdzb"].ToString();
+                 string[] tdzbs = tdzb.Split(',');
+                 dr["tdzb"] = "";
+                 for (int n = 0; n < tdzbs.Length - 1; n++)
+                 {
+                     dr["tdzb"] += thgl.Select_YGXMbyBH(tdzbs[n]).Rows[0]["xm"].ToString() + ' ';
+                 }
+                 string gczb = dr["gczb"].ToString();
+                 string[] gczbs = gczb.Split(',');
+                 dr["gczb"] = "";
+                 for (int n = 0; n < gczbs.Length - 1; n++)
+                 {
+                     dr["gczb"] += thgl.Select_YGXMbyBH(gczbs[n]).Rows[0]["xm"].ToString() + ' ';
+                 }*/
+
+                //塔台值班
+                string[] Array_ttzb = dr["ttzb"].ToString().Split(',');
                 dr["ttzb"] = "";
-                for (int n = 0; n < ttzbs.Length - 1; n++)
+                foreach (string dhbzs_bh in Array_ttzb)
                 {
-                    dr["ttzb"] += thgl.Select_YGXMbyBH(ttzbs[n]).Rows[0]["xm"].ToString() + ' ';
+                    dr["ttzb"] += thgl.Select_YGXMbyBH(dhbzs_bh.ToString()).Rows[0][0].ToString() + " ";
                 }
-                string zdzb = dr["zdzb"].ToString();
-                string[] zdzbs = zdzb.Split(',');
+
+                //站调值班               
+                string[] Array_zdzb = dr["zdzb"].ToString().Split(',');
                 dr["zdzb"] = "";
-                for (int n = 0; n < zdzbs.Length - 1; n++)
+                foreach (string zdzb_bh in Array_zdzb)
                 {
-                    dr["zdzb"] += thgl.Select_YGXMbyBH(zdzbs[n]).Rows[0]["xm"].ToString() + ' ';
+                    dr["zdzb"] += thgl.Select_YGXMbyBH(zdzb_bh.ToString()).Rows[0]["xm"].ToString() + ' ';
                 }
-                string tdzb = dr["tdzb"].ToString();
-                string[] tdzbs = tdzb.Split(',');
+
+                //通导值班
+                string[] Array_tdzb = dr["tdzb"].ToString().Split(',');
                 dr["tdzb"] = "";
-                for (int n = 0; n < tdzbs.Length - 1; n++)
+                foreach (string tdzb_bh in Array_ttzb)
                 {
-                    dr["tdzb"] += thgl.Select_YGXMbyBH(tdzbs[n]).Rows[0]["xm"].ToString() + ' ';
+                    dr["tdzb"] += thgl.Select_YGXMbyBH(tdzb_bh.ToString()).Rows[0]["xm"].ToString() + ' ';
                 }
-                string gczb = dr["gczb"].ToString();
-                string[] gczbs = gczb.Split(',');
+
+
+                //观测
+                string[] Array_gc = dr["gczb"].ToString().Split(',');
                 dr["gczb"] = "";
-                for (int n = 0; n < gczbs.Length - 1; n++)
+                foreach (string gc_bh in Array_ttzb)
                 {
-                    dr["gczb"] += thgl.Select_YGXMbyBH(gczbs[n]).Rows[0]["xm"].ToString() + ' ';
+                    dr["gczb"] += thgl.Select_YGXMbyBH(gc_bh.ToString()).Rows[0]["xm"].ToString() + ' ';
                 }
-                string ybzb = dr["ybzb"].ToString();
+                //预报值班
+
+                string[] Array_ybzb = dr["ybzb"].ToString().Split(',');
+                dr["ybzb"] = "";
+                foreach (string gc_bh in Array_ttzb)
+                {
+                    dr["ybzb"] += thgl.Select_YGXMbyBH(gc_bh.ToString()).Rows[0]["xm"].ToString() + ' ';
+                }
+              /*  string ybzb = dr["ybzb"].ToString();
                 string[] ybzbs = ybzb.Split(',');
                 dr["ybzb"] = "";
                 for (int n = 0; n < ybzbs.Length - 1; n++)
                 {
                     dr["ybzb"] += thgl.Select_YGXMbyBH(ybzbs[n]).Rows[0]["xm"].ToString() + ' ';
-                }
+                }*/
                 dt_rq = Convert.ToDateTime(dr["rq"].ToString());
                 dr["rqmc"] = string.Format("{0:yyyy-MM-dd}", dt_rq);
             }
