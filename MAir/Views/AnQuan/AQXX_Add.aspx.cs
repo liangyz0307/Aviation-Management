@@ -180,11 +180,18 @@ namespace CUST.WKG
             struct_fxy.p_zrbm = ddlt_zrbm.SelectedValue.ToString();//责任部门
             struct_fxy.p_bz = tbx_bz.Text.ToString().Trim();//备注
             struct_fxy.p_tqcz = ddlt_tqcz.SelectedValue.Trim().ToString();//特情处置
+            if (ddlt_tqcz.SelectedValue.Trim().ToString() == "02")
+            {
+                struct_fxy.p_sfsj = Convert.ToDateTime(tbx_bssj.Text.ToString().Trim());//{2021/2/7 0:00:00}
+                struct_fxy.p_bgsj = Convert.ToDateTime(tbx_bssj.Text.ToString().Trim());
+            }
+            else {
+                struct_fxy.p_sfsj = Convert.ToDateTime(tbx_sfsj.Text.ToString().Trim());//报送时间
+                struct_fxy.p_bgsj = Convert.ToDateTime(tbx_bgsj.Text.ToString().Trim());//报告时间
+            }
             struct_fxy.p_gzqk = tbx_gzqk.Text.ToString().Trim();//管制情况
             struct_fxy.p_sjqk = tbx_sjqk.Text.ToString().Trim();//事件情况
-            struct_fxy.p_sfsj = Convert.ToDateTime(tbx_sfsj.Text.ToString().Trim());//报送时间
             struct_fxy.p_zrdw = ddlt_zrdw.SelectedValue.ToString().Trim();//责任单位
-            struct_fxy.p_bgsj = Convert.ToDateTime(tbx_bgsj.Text.ToString().Trim());//报告时间
             struct_fxy.p_fxymc = " ";
             struct_fxy.p_st = " ";
             struct_fxy.p_fxyfc = " ";
