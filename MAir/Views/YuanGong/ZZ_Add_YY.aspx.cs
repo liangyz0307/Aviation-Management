@@ -36,10 +36,10 @@ namespace CUST.WKG
                 bind_dropdownlist();
                 ddltBind();
                 tbx_yyyxq.Attributes.Add("readonly", "readonly");
-               
+
             }
         }
-      
+
         protected void bind_dropdownlist()
         {
             //英语等级
@@ -48,10 +48,6 @@ namespace CUST.WKG
             ddlt_yydj.DataSource = SysData.YYDJ().Copy();
             ddlt_yydj.DataBind();
             ddlt_yydj.Items.Insert(0, new ListItem("请选择", "-1"));
-
-
-          
-           
         }
         private void ddltBind()
         {
@@ -134,7 +130,6 @@ namespace CUST.WKG
             if (flag == 1) { return; }
             #endregion
             struct_ygzz.p_ygbh = lbl_bh.Text;//员工编号
-                    
             struct_ygzz.p_yydj = ddlt_yydj.SelectedValue.ToString();//英语等级
             if (tbx_yyyxq.Text != "")
             {
@@ -142,14 +137,16 @@ namespace CUST.WKG
             }
             else
             {
-                DateTime dt = new DateTime();
-                struct_ygzz.p_yyyxq = dt;
+               // DateTime dt = new DateTime();
+                string yyyxq1 = "2099-12-31";
+                //  struct_ygzz.p_yyyxq = dt;
+                struct_ygzz.p_yyyxq = DateTime.Parse(yyyxq1);
             }
             struct_ygzz.p_lrr = _usState.userLoginName.ToString();//录入人
             struct_ygzz.p_csr = ddlt_csr.SelectedValue.ToString().Trim();//初审人
             struct_ygzz.p_zsr = ddlt_zsr.SelectedValue.ToString().Trim();//终审人
-           // struct_ygzz.p_sjbs = "0";
-            //如果是初审人录入数据，则状态默认初审通过，即待终审
+                                                                         // struct_ygzz.p_sjbs = "0";
+                                                                         //如果是初审人录入数据，则状态默认初审通过，即待终审
             if (struct_ygzz.p_lrr.Equals(struct_ygzz.p_csr))
             {
                 struct_ygzz.p_sjbs = "0";
@@ -174,9 +171,9 @@ namespace CUST.WKG
             struct_ygzz.p_bz = tbx_bz.Text;//备注
             struct_ygzz.lx = "0";
             struct_ygzz.p_czfs = "01";
-            struct_ygzz.p_czxx = "位置：员工管理->资质管理->添加    描述：员工编号："+ struct_ygzz.p_ygbh+"英语等级："
-                + struct_ygzz.p_yydj+"英语有效期："+ struct_ygzz.p_yyyxq+ "备注："+ struct_ygzz.p_bz;
-            
+            struct_ygzz.p_czxx = "位置：员工管理->资质管理->添加    描述：员工编号：" + struct_ygzz.p_ygbh + "英语等级："
+                + struct_ygzz.p_yydj + "英语有效期：" + struct_ygzz.p_yyyxq + "备注：" + struct_ygzz.p_bz;
+
             ygzz.Insert_YGZZ_ENG(struct_ygzz);
             Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"添加成功！\")</script>");
             Response.Redirect("ZZ_Edit.aspx?ygbh=" + lbl_bh.Text);
@@ -208,6 +205,19 @@ namespace CUST.WKG
 
 
 
+        protected void ddlt_tqcz_change(object sender, EventArgs e)
+        {
+            string yydj = ddlt_yydj.Text.ToString();
+            if (ddlt_yydj.SelectedValue.Trim() == "4" || ddlt_yydj.SelectedValue.Trim() == "5" || ddlt_yydj.SelectedValue.Trim() == "0")
+            {
+                tbx_yyyxq.Visible = false;
+                tbx_yyyxq.Text = "2099-12-31";
+            }
+            else {
 
+                tbx_yyyxq.Visible = true;
+                tbx_yyyxq.Text = "";
+            }         
+        }
     }
 }
