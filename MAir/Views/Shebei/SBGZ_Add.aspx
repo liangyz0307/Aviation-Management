@@ -115,7 +115,7 @@
             </td>
             <td style="width: 30%; text-align: left; vertical-align: middle;" class="td_sjsc"
                 >
-                  <asp:TextBox ID="tbx_gzqssj" runat="server" Height="25px" placeholder="故障起始时间"  class="Wdate"   Width="60%"   onclick="lhgcalendar({format:'yyyy-MM-dd'})"></asp:TextBox>
+                  <asp:TextBox ID="tbx_gzqssj" runat="server" Height="25px" placeholder="故障起始时间"  class="Wdate"   Width="60%"   onclick="lhgcalendar({format:'yyyy-MM-dd HH:mm:ss'})"></asp:TextBox>
                 <asp:Label ID="lbl_gzqssj" runat="server"></asp:Label>
             </td>
             <td style="width: 20%; text-align: right; vertical-align: middle;" class="td_sjsc"
@@ -124,7 +124,7 @@
             </td>
             <td style="width: 30%;  text-align: left; vertical-align: middle;" class="td_sjsc"
                 >
-                 <asp:TextBox ID="tbx_gzjssj" runat="server" Height="25px" placeholder="故障结束时间"  class="Wdate"   Width="60%"   onclick="lhgcalendar({format:'yyyy-MM-dd'})"></asp:TextBox>
+                 <asp:TextBox ID="tbx_gzjssj" runat="server" Height="25px" placeholder="故障结束时间"  class="Wdate"   Width="60%"   onclick="lhgcalendar({format:'yyyy-MM-dd HH:mm:ss'})"></asp:TextBox>
                 <asp:Label ID="lbl_gzjssj" runat="server"></asp:Label>
             </td>
         </tr>
