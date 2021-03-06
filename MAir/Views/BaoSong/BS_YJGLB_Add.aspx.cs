@@ -404,7 +404,7 @@ namespace CUST.WKG
             if (ddlt_zbld.Items.Count > 0)
             {
                 tbx_zbld.Text = ddlt_zbld.SelectedItem.Text;
-                zbldbh = ddlt_zbld.SelectedValue.ToString() + ",";
+                zbldbh = ddlt_zbld.SelectedValue.ToString()+",";
             }
         }
 
@@ -452,8 +452,8 @@ namespace CUST.WKG
                 xzbbh = "";
                 if (ddlt_xzb.Items.Count > 0)
                 {
-                    tbx_xzb.Text += ddlt_xzb.SelectedItem.Text + ",";
-                    xzbbh += ddlt_xzb.SelectedValue.ToString() + ",";
+                    tbx_xzb.Text += ddlt_xzb.SelectedItem.Text;
+                    xzbbh += ddlt_xzb.SelectedValue.ToString();
                 }
             }
             else
@@ -517,8 +517,8 @@ namespace CUST.WKG
                 gzdbzrbh = "";
                 if (ddlt_gzdbzr.Items.Count > 0)
                 {
-                    tbx_gzdbzr.Text += ddlt_gzdbzr.SelectedItem.Text + ",";
-                    gzdbzrbh += ddlt_gzdbzr.SelectedValue.ToString() + ",";
+                    tbx_gzdbzr.Text += ddlt_gzdbzr.SelectedItem.Text;
+                    gzdbzrbh += ddlt_gzdbzr.SelectedValue.ToString();
                 }
             }
             else
@@ -585,8 +585,8 @@ namespace CUST.WKG
                 ttzbbh = "";
                 if (ddlt_ttzb.Items.Count > 0)
                 {
-                    tbx_ttzb.Text += ddlt_ttzb.SelectedItem.Text + ",";
-                    ttzbbh += ddlt_ttzb.SelectedValue.ToString() + ",";
+                    tbx_ttzb.Text += ddlt_ttzb.SelectedItem.Text;
+                    ttzbbh += ddlt_ttzb.SelectedValue.ToString();
                 }
             }
             else
@@ -651,15 +651,15 @@ namespace CUST.WKG
                 zdzbbh = "";
                 if (ddlt_zdzb.Items.Count > 0)
                 {
-                    tbx_zdzb.Text += ddlt_zdzb.SelectedItem.Text + ",";
-                    zdzbbh += ddlt_zdzb.SelectedValue.ToString() + ",";
+                    tbx_zdzb.Text += ddlt_zdzb.SelectedItem.Text;
+                    zdzbbh += ddlt_zdzb.SelectedValue.ToString();
                 }
             }
             else
             {
                 zdzbbh_cs = zdzbbh + "," + ddlt_zdzb.SelectedValue.ToString();
-                string[] Arry_qxyb = zdzbbh_cs.Split(new char[1] { ',' });
-                if (IsRepeat2(Arry_qxyb) == true)
+                string[] Arry_zdzb = zdzbbh_cs.Split(new char[1] { ',' });
+                if (IsRepeat2(Arry_zdzb) == true)
                 {
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"已添加此值班人员，不能重复添加！\")</script>");
                     return;
@@ -716,15 +716,15 @@ namespace CUST.WKG
                 qbbh = "";
                 if (ddlt_qb.Items.Count > 0)
                 {
-                    tbx_qb.Text += ddlt_qb.SelectedItem.Text + ",";
-                    qbbh += ddlt_qb.SelectedValue.ToString() + ",";
+                    tbx_qb.Text += ddlt_qb.SelectedItem.Text;
+                    qbbh += ddlt_qb.SelectedValue.ToString();
                 }
             }
             else
             {
                 qbbh_cs = qbbh + "," + ddlt_qb.SelectedValue.ToString();
-                string[] Arry_qxyb = qbbh_cs.Split(new char[1] { ',' });
-                if (IsRepeat2(Arry_qxyb) == true)
+                string[] Arry_qb = qbbh_cs.Split(new char[1] { ',' });
+                if (IsRepeat2(Arry_qb) == true)
                 {
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"已添加此值班人员，不能重复添加！\")</script>");
                     return;
@@ -781,15 +781,15 @@ namespace CUST.WKG
                 tddbbh = "";
                 if (ddlt_tddb.Items.Count > 0)
                 {
-                    tbx_tddb.Text += ddlt_tddb.SelectedItem.Text + ",";
-                    tddbbh += ddlt_tddb.SelectedValue.ToString() + ",";
+                    tbx_tddb.Text += ddlt_tddb.SelectedItem.Text;
+                    tddbbh += ddlt_tddb.SelectedValue.ToString();
                 }
             }
             else
             {
                 tddbbh_cs = tddbbh + "," + ddlt_tddb.SelectedValue.ToString();
-                string[] Arry_qxyb = tddbbh_cs.Split(new char[1] { ',' });
-                if (IsRepeat2(Arry_qxyb) == true)
+                string[] Arry_tddb = tddbbh_cs.Split(new char[1] { ',' });
+                if (IsRepeat2(Arry_tddb) == true)
                 {
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"已添加此值班人员，不能重复添加！\")</script>");
                     return;
@@ -846,15 +846,15 @@ namespace CUST.WKG
                 txbh = "";
                 if (ddlt_tx.Items.Count > 0)
                 {
-                    tbx_tx.Text += ddlt_tx.SelectedItem.Text + ",";
-                    txbh += ddlt_tx.SelectedValue.ToString() + ",";
+                    tbx_tx.Text += ddlt_tx.SelectedItem.Text;
+                    txbh += ddlt_tx.SelectedValue.ToString();
                 }
             }
             else
             {
                 txbh_cs = txbh + "," + ddlt_tx.SelectedValue.ToString();
-                string[] Arry_qxyb = txbh_cs.Split(new char[1] { ',' });
-                if (IsRepeat2(Arry_qxyb) == true)
+                string[] Arry_tx = txbh_cs.Split(new char[1] { ',' });
+                if (IsRepeat2(Arry_tx) == true)
                 {
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"已添加此值班人员，不能重复添加！\")</script>");
                     return;
@@ -918,8 +918,8 @@ namespace CUST.WKG
             else
             {
                 dhbh_cs = dhbh + "," + ddlt_dh.SelectedValue.ToString();
-                string[] Arry_qxyb = dhbh_cs.Split(new char[1] { ',' });
-                if (IsRepeat2(Arry_qxyb) == true)
+                string[] Arry_dh = dhbh_cs.Split(new char[1] { ',' });
+                if (IsRepeat2(Arry_dh) == true)
                 {
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"已添加此值班人员，不能重复添加！\")</script>");
                     return;
@@ -977,15 +977,15 @@ namespace CUST.WKG
                 //ddlt_fzr.SelectedItem.Text获取下拉框DataTextField值
                 if (ddlt_bt.Items.Count > 0)
                 {
-                    tbx_bt.Text += ddlt_bt.SelectedItem.Text + ",";
-                    btbh += ddlt_bt.SelectedValue.ToString() + ",";
+                    tbx_bt.Text += ddlt_bt.SelectedItem.Text;
+                    btbh += ddlt_bt.SelectedValue.ToString();
                 }
             }
             else
             {
                 btbh_cs = btbh + "," + ddlt_bt.SelectedValue.ToString();
-                string[] Arry_qxyb = btbh_cs.Split(new char[1] { ',' });
-                if (IsRepeat2(Arry_qxyb) == true)
+                string[] Arry_bt = btbh_cs.Split(new char[1] { ',' });
+                if (IsRepeat2(Arry_bt) == true)
                 {
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"已添加此值班人员，不能重复添加！\")</script>");
                     return;
@@ -1043,15 +1043,15 @@ namespace CUST.WKG
                 //ddlt_fzr.SelectedItem.Text获取下拉框DataTextField值
                 if (ddlt_qxjw.Items.Count > 0)
                 {
-                    tbx_qxjw.Text += ddlt_qxjw.SelectedItem.Text + ",";
-                    qxjwbh += ddlt_qxjw.SelectedValue.ToString() + ",";
+                    tbx_qxjw.Text += ddlt_qxjw.SelectedItem.Text;
+                    qxjwbh += ddlt_qxjw.SelectedValue.ToString();
                 }
             }
             else
             {
                 qxjwbh_cs = qxjwbh + "," + ddlt_qxjw.SelectedValue.ToString();
-                string[] Arry_qxyb = qxjwbh_cs.Split(new char[1] { ',' });
-                if (IsRepeat2(Arry_qxyb) == true)
+                string[] Arry_qxjw = qxjwbh_cs.Split(new char[1] { ',' });
+                if (IsRepeat2(Arry_qxjw) == true)
                 {
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"已添加此值班人员，不能重复添加！\")</script>");
                     return;
@@ -1110,15 +1110,15 @@ namespace CUST.WKG
                 //ddlt_fzr.SelectedItem.Text获取下拉框DataTextField值
                 if (ddlt_qxgc.Items.Count > 0)
                 {
-                    tbx_qxgc.Text += ddlt_qxgc.SelectedItem.Text + ",";
-                    qxgcbh += ddlt_qxgc.SelectedValue.ToString() + ",";
+                    tbx_qxgc.Text += ddlt_qxgc.SelectedItem.Text;
+                    qxgcbh += ddlt_qxgc.SelectedValue.ToString();
                 }
             }
             else
             {
                 qxgcbh_cs = qxgcbh + "," + ddlt_qxgc.SelectedValue.ToString();
-                string[] Arry_qxyb = qxgcbh_cs.Split(new char[1] { ',' });
-                if (IsRepeat2(Arry_qxyb) == true)
+                string[] Arry_qxgc = qxgcbh_cs.Split(new char[1] { ',' });
+                if (IsRepeat2(Arry_qxgc) == true)
                 {
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"已添加此值班人员，不能重复添加！\")</script>");
                     return;
@@ -1177,8 +1177,8 @@ namespace CUST.WKG
                 //ddlt_fzr.SelectedItem.Text获取下拉框DataTextField值
                 if (ddlt_qxyb.Items.Count > 0)
                 {
-                    tbx_qxyb.Text += ddlt_qxyb.SelectedItem.Text + ",";
-                    qxybbh += ddlt_qxyb.SelectedValue.ToString() + ",";
+                    tbx_qxyb.Text += ddlt_qxyb.SelectedItem.Text;
+                    qxybbh += ddlt_qxyb.SelectedValue.ToString();
                 }
             }
             else

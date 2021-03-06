@@ -365,8 +365,8 @@ namespace CUST.WKG
             }
             else
             {
-                zdzb_cs = ttzbbh + "," + ddlt_zdzb.SelectedValue.ToString();
-                string[] Arry_zdzb = ttzb_cs.Split(new char[1] { ',' });
+                zdzb_cs = zdzbbh + "," + ddlt_zdzb.SelectedValue.ToString();
+                string[] Arry_zdzb = zdzb_cs.Split(new char[1] { ',' });
                 if (IsRepeat2(Arry_zdzb) == true)
                 {
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"已添加此值班人员，不能重复添加！\")</script>");
@@ -434,7 +434,7 @@ namespace CUST.WKG
             else
             {
                 tdzb_cs = tdzbbh + "," + ddlt_tdzb.SelectedValue.ToString();
-                string[] Arry_tdzb = ttzb_cs.Split(new char[1] { ',' });
+                string[] Arry_tdzb = tdzb_cs.Split(new char[1] { ',' });
                 if (IsRepeat2(Arry_tdzb) == true)
                 {
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"已添加此值班人员，不能重复添加！\")</script>");
@@ -442,7 +442,7 @@ namespace CUST.WKG
                 }
                 else
                 {
-                    tbx_tdzb.Text = tbx_zdzb.Text.ToString() + "," + ddlt_tdzb.SelectedItem.Text;
+                    tbx_tdzb.Text = tbx_tdzb.Text.ToString() + "," + ddlt_tdzb.SelectedItem.Text;
                     tdzbbh = tdzbbh + "," + ddlt_tdzb.SelectedValue.ToString();
                 }
             }
@@ -500,7 +500,7 @@ namespace CUST.WKG
             else
             {
                 gczb_cs = gczbbh + "," + ddlt_gczb.SelectedValue.ToString();
-                string[] Arry_qxyb = ttzb_cs.Split(new char[1] { ',' });
+                string[] Arry_qxyb = gczb_cs.Split(new char[1] { ',' });
                 if (IsRepeat2(Arry_qxyb) == true)
                 {
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"已添加此值班人员，不能重复添加！\")</script>");
@@ -565,8 +565,8 @@ namespace CUST.WKG
             else
             {
                 ybzbbh_cs = ybzbbh + "," + ddlt_ybzb.SelectedValue.ToString();
-                string[] Arry_qxyb = ttzb_cs.Split(new char[1] { ',' });
-                if (IsRepeat2(Arry_qxyb) == true)
+                string[] Arry_ybzb = ybzbbh_cs.Split(new char[1] { ',' });
+                if (IsRepeat2(Arry_ybzb) == true)
                 {
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"已添加此值班人员，不能重复添加！\")</script>");
                     return;

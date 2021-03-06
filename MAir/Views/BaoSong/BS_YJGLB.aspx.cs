@@ -124,90 +124,206 @@ namespace CUST.WKG
                 {
                     dr["zbld"] += yjgl.Select_YGXMbyBH(zblds[n]).Rows[0]["xm"].ToString() + ' ';
                 }
-                string xzb = dr["xzb"].ToString();
+
+                //-----------------------------------------------------------
+               /* string xzb = dr["xzb"].ToString();
                 string[] xzbs = xzb.Split(',');
                 dr["xzb"] = "";
                 for (int n = 0; n < xzbs.Length - 1; n++)
                 {
                     dr["xzb"] += yjgl.Select_YGXMbyBH(xzbs[n]).Rows[0]["xm"].ToString() + ' ';
-                }
-                string gzdbzr = dr["gzdbzr"].ToString();
-                string[] gzdbzrs = gzdbzr.Split(',');
-                dr["gzdbzr"] = "";
-                for (int n = 0; n < gzdbzrs.Length - 1; n++)
+                }*/
+                string[] Array_xzb = dr["xzb"].ToString().Split(',');
+                dr["xzb"] = "";
+                foreach (string xzb_bh in Array_xzb)
                 {
-                    dr["gzdbzr"] += yjgl.Select_YGXMbyBH(gzdbzrs[n]).Rows[0]["xm"].ToString() + ' ';
+                    dr["xzb"] += yjgl.Select_YGXMbyBH(xzb_bh.ToString()).Rows[0][0].ToString() + ' ';
+
                 }
-                string ttzb = dr["ttzb"].ToString();
+
+
+
+                /*  string gzdbzr = dr["gzdbzr"].ToString();
+                  string[] gzdbzrs = gzdbzr.Split(',');
+                  dr["gzdbzr"] = "";
+                  for (int n = 0; n < gzdbzrs.Length - 1; n++)
+                  {
+                      dr["gzdbzr"] += yjgl.Select_YGXMbyBH(gzdbzrs[n]).Rows[0]["xm"].ToString() + ' ';
+                  }*/
+
+                string[] Array_gzdbzr = dr["gzdbzr"].ToString().Split(',');
+                dr["gzdbzr"] = "";
+                foreach (string gzdbzr_bh in Array_gzdbzr)
+                {
+                    dr["gzdbzr"] += yjgl.Select_YGXMbyBH(gzdbzr_bh.ToString()).Rows[0][0].ToString() + ' ';
+
+                }
+
+             /*   string ttzb = dr["ttzb"].ToString();
                 string[] ttzbs = ttzb.Split(',');
                 dr["ttzb"] = "";
                 for (int n = 0; n < ttzbs.Length - 1; n++)
                 {
                     dr["ttzb"] += yjgl.Select_YGXMbyBH(ttzbs[n]).Rows[0]["xm"].ToString() + ' ';
+                }*/
+
+                string[] Array_ttzb = dr["ttzb"].ToString().Split(',');
+                dr["ttzb"] = "";
+                foreach (string ttzb_bh in Array_ttzb)
+                {
+                    dr["ttzb"] += yjgl.Select_YGXMbyBH(ttzb_bh.ToString()).Rows[0][0].ToString() + ' ';
+
                 }
-                string zdzb = dr["zdzb"].ToString();
+
+            /*    string zdzb = dr["zdzb"].ToString();
                 string[] zdzbs = zdzb.Split(',');
                 dr["zdzb"] = "";
                 for (int n = 0; n < zdzbs.Length - 1; n++)
                 {
                     dr["zdzb"] += yjgl.Select_YGXMbyBH(zdzbs[n]).Rows[0]["xm"].ToString() + ' ';
+                }*/
+
+                string[] Array_zdzb = dr["zdzb"].ToString().Split(',');
+                dr["zdzb"] = "";
+                foreach (string zdzb_bh in Array_zdzb)
+                {
+                    dr["zdzb"] += yjgl.Select_YGXMbyBH(zdzb_bh.ToString()).Rows[0][0].ToString() + ' ';
+
                 }
-                string qb = dr["qb"].ToString();
+
+
+              /*  string qb = dr["qb"].ToString();
                 string[] qbs = qb.Split(',');
                 dr["qb"] = "";
                 for (int n = 0; n < qbs.Length - 1; n++)
                 {
                     dr["qb"] += yjgl.Select_YGXMbyBH(qbs[n]).Rows[0]["xm"].ToString() + ' ';
-                }
-                string tddb = dr["tddb"].ToString();
-                string[] tddbs = tddb.Split(',');
-                dr["tddb"] = "";
-                for (int n = 0; n < tddbs.Length - 1; n++)
+                }*/
+
+                string[] Array_qb = dr["qb"].ToString().Split(',');
+                dr["qb"] = "";
+                foreach (string qb_bh in Array_qb)
                 {
-                    dr["tddb"] += yjgl.Select_YGXMbyBH(tddbs[n]).Rows[0]["xm"].ToString() + ' ';
+                    dr["qb"] += yjgl.Select_YGXMbyBH(qb_bh.ToString()).Rows[0][0].ToString() + ' ';
+
                 }
-                string tx = dr["tx"].ToString();
+
+                /*     string tddb = dr["tddb"].ToString();
+                     string[] tddbs = tddb.Split(',');
+                     dr["tddb"] = "";
+                     for (int n = 0; n < tddbs.Length - 1; n++)
+                     {
+                         dr["tddb"] += yjgl.Select_YGXMbyBH(tddbs[n]).Rows[0]["xm"].ToString() + ' ';
+                     }*/
+
+                string[] Array_tddb = dr["tddb"].ToString().Split(',');
+                dr["tddb"] = "";
+                foreach (string tddb_bh in Array_tddb)
+                {
+                    dr["tddb"] += yjgl.Select_YGXMbyBH(tddb_bh.ToString()).Rows[0][0].ToString() + ' ';
+
+                }
+
+             /*   string tx = dr["tx"].ToString();
                 string[] txs = tx.Split(',');
                 dr["tx"] = "";
                 for (int n = 0; n < txs.Length - 1; n++)
                 {
                     dr["tx"] += yjgl.Select_YGXMbyBH(txs[n]).Rows[0]["xm"].ToString() + ' ';
+                }*/
+
+                string[] Array_tx = dr["tx"].ToString().Split(',');
+                dr["tx"] = "";
+                foreach (string tx_bh in Array_tx)
+                {
+                    dr["tx"] += yjgl.Select_YGXMbyBH(tx_bh.ToString()).Rows[0][0].ToString() + ' ';
+
                 }
-                string dh = dr["dh"].ToString();
+
+
+
+             /*   string dh = dr["dh"].ToString();
                 string[] dhs = dh.Split(',');
                 dr["dh"] = "";
                 for (int n = 0; n < dhs.Length - 1; n++)
                 {
                     dr["dh"] += yjgl.Select_YGXMbyBH(dhs[n]).Rows[0]["xm"].ToString() + ' ';
+                }*/
+
+                string[] Array_dh = dr["dh"].ToString().Split(',');
+                dr["dh"] = "";
+                foreach (string dh_bh in Array_dh)
+                {
+                    dr["dh"] += yjgl.Select_YGXMbyBH(dh_bh.ToString()).Rows[0][0].ToString() + ' ';
+
                 }
-                string bt = dr["bt"].ToString();
+
+           /*     string bt = dr["bt"].ToString();
                 string[] bts = bt.Split(',');
                 dr["bt"] = "";
                 for (int n = 0; n < bts.Length - 1; n++)
                 {
                     dr["bt"] += yjgl.Select_YGXMbyBH(bts[n]).Rows[0]["xm"].ToString() + ' ';
+                }*/
+
+                string[] Array_bt = dr["bt"].ToString().Split(',');
+                dr["bt"] = "";
+                foreach (string bt_bh in Array_bt)
+                {
+                    dr["bt"] += yjgl.Select_YGXMbyBH(bt_bh.ToString()).Rows[0][0].ToString() + ' ';
+
                 }
-                string qxjw = dr["qxjw"].ToString();
+
+             /*   string qxjw = dr["qxjw"].ToString();
                 string[] qxjws = qxjw.Split(',');
                 dr["qxjw"] = "";
                 for (int n = 0; n < qxjws.Length - 1; n++)
                 {
                     dr["qxjw"] += yjgl.Select_YGXMbyBH(qxjws[n]).Rows[0]["xm"].ToString() + ' ';
+                }*/
+
+                string[] Array_qxjw = dr["qxjw"].ToString().Split(',');
+                dr["qxjw"] = "";
+                foreach (string qxjw_bh in Array_qxjw)
+                {
+                    dr["qxjw"] += yjgl.Select_YGXMbyBH(qxjw_bh.ToString()).Rows[0][0].ToString() + ' ';
+
                 }
-                string qxgc = dr["qxgc"].ToString();
+
+
+            /*    string qxgc = dr["qxgc"].ToString();
                 string[] qxgcs = qxgc.Split(',');
                 dr["qxgc"] = "";
                 for (int n = 0; n < qxgcs.Length - 1; n++)
                 {
                     dr["qxgc"] += yjgl.Select_YGXMbyBH(qxgcs[n]).Rows[0]["xm"].ToString() + ' ';
                 }
-                string qxyb = dr["qxyb"].ToString();
+*/
+                string[] Array_qxgc = dr["qxgc"].ToString().Split(',');
+                dr["qxgc"] = "";
+                foreach (string qxgc_bh in Array_qxgc)
+                {
+                    dr["qxgc"] += yjgl.Select_YGXMbyBH(qxgc_bh.ToString()).Rows[0][0].ToString() + ' ';
+
+                }
+
+
+             /*   string qxyb = dr["qxyb"].ToString();
                 string[] qxybs = qxyb.Split(',');
                 dr["qxyb"] = "";
                 for (int n = 0; n < qxybs.Length - 1; n++)
                 {
                     dr["qxyb"] += yjgl.Select_YGXMbyBH(qxybs[n]).Rows[0]["xm"].ToString() + ' ';
+                }*/
+
+                string[] Array_qxyb = dr["qxyb"].ToString().Split(',');
+                dr["qxyb"] = "";
+                foreach (string qxyb_bh in Array_qxyb)
+                {
+                    dr["qxyb"] += yjgl.Select_YGXMbyBH(qxyb_bh.ToString()).Rows[0][0].ToString() + ' ';
+
                 }
+
                 dt_rq = Convert.ToDateTime(dr["rq"].ToString());
                 dr["rqmc"] = string.Format("{0:yyyy-MM-dd}", dt_rq);
             }

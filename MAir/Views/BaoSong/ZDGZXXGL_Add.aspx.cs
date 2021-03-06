@@ -74,12 +74,17 @@ namespace CUST.WKG
 
 
             //数据所在部门
+          
             DataTable dt_bmdm = SysData.BM("130202", _usState.userID).Copy();
             ddlt_sjssbm.DataSource = dt_bmdm;
             ddlt_sjssbm.DataTextField = "bmmc";
             ddlt_sjssbm.DataValueField = "bmdm";
             ddlt_sjssbm.DataBind();
             ddlt_sjssbm.Items.Insert(0, new ListItem("请选择", "-1"));
+
+
+
+           
         }
         private void ddltBind()
         {
