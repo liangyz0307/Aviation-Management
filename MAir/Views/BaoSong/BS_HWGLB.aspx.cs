@@ -115,27 +115,39 @@ namespace CUST.WKG
             }
 
             DataTable dt = new DataTable();
-            int count = hwglb.Select_HWGLB_Count(struct_hwglb);
+        
+
             struct_hwglb.p_currentpage = pg_fy.CurrentPage;
             struct_hwglb.p_pagesize = pg_fy.NumPerPage;
             dt = hwglb.Select_HWGLB_Pro(struct_hwglb);
-
+            
             dt.Columns.Add("xqmc");
             dt.Columns.Add("rqmc");
             DateTime dt_rq = new DateTime();
             foreach (DataRow dr in dt.Rows)
             {
-                string list = dr["dhbzs"].ToString();
+               /* string list = dr["dhbzs"].ToString();
                 string[] lists = list.Split(',');
                 dr["dhbzs"] = "";
-                for (int n = 0; n < lists.Length - 1; n++)
+                for (int n = 0; n < lists.Length-1; n++)
                 {
                     dr["dhbzs"] += hwglb.Select_YGXMbyBH(lists[n]).Rows[0]["xm"].ToString() + ' ';
+                }*/
+
+
+                string[] Array_dhbzs = dr["dhbzs"].ToString().Split(',');
+                dr["dhbzs"] = "";
+                foreach (string dhbzs_bh in Array_dhbzs)
+                {
+                    dr["dhbzs"] += hwglb.Select_YGXMbyBH(dhbzs_bh.ToString()).Rows[0]["xm"].ToString() + ' ';
+
                 }
+
+
                 string zbld = dr["zbld"].ToString();
                 string[] zblds = zbld.Split(',');
                 dr["zbld"] = "";
-                for (int n = 0; n < zblds.Length - 1; n++)
+                for (int n = 0; n < zblds.Length-1; n++)
                 {
                     dr["zbld"] += hwglb.Select_YGXMbyBH(zblds[n]).Rows[0]["xm"].ToString() + ' ';
                 }

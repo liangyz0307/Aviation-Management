@@ -114,51 +114,61 @@ namespace CUST.WKG
             struct_hwglb.p_zbld = zbldbh;
             struct_hwglb.p_yddh = tbx_yddh.Text.ToString().Trim();
             struct_hwglb.p_gddh = tbx_gddh.Text.ToString().Trim();
-            // struct_hwglb.p_dhbzs = dhbzsbh;
+            struct_hwglb.p_dhbzs = dhbzsbh;
             struct_hwglb.p_bz = tbx_bz.Text.ToString().Trim();
             struct_hwglb.p_bmdm = ddlt_sjszbm.SelectedValue.ToString().Trim();
 
             struct_hwglb.p_czfs = "02";
             struct_hwglb.p_czxx = "位置：航务综合报送->值班表->添加   描述：员工编号：" + _usState.userLoginName;
-
-
-            string[] Arry_tx = dhbzsbh.Split(new char[1] { ',' });
-
-            if (Arry_tx.Length == 1)
+            try
             {
-                struct_hwglb.p_dhbzs = dhbzsbh;
-                try
-                {
-                    hwglb.Insert__HWGLB(struct_hwglb);
-                    //Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"添加成功！\")</script>");
-                    ClientScript.RegisterStartupScript(this.GetType(), "", " <script lanuage=javascript> alert('添加成功');location.href='BS_HWGLB.aspx';</script>");
-                }
-                catch (EMException ex)
-                {
-                    Response.Write(EMException.ShowErrorScript(ex));
-                    return;
-                }
+                hwglb.Insert__HWGLB(struct_hwglb);
+                //Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"添加成功！\")</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "", " <script lanuage=javascript> alert('添加成功');location.href='BS_HWGLB.aspx';</script>");
             }
-            else
+            catch (EMException ex)
             {
-                int i = Arry_tx.Length;
-                for (int ry = 0; ry < i; ry++)
-                {
-                    struct_hwglb.p_dhbzs = Arry_tx[ry].ToString();
-                    try
-                    {
-                        //DataTable ygpx = ChangeTable(struct_pxjl);
-                        hwglb.Insert__HWGLB(struct_hwglb);
-                        Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"添加成功！\")</script>");
-                    }
-                    catch (Exception em)
-                    {
-                        throw em;
-                    }
-
-                }
-
+                Response.Write(EMException.ShowErrorScript(ex));
+                return;
             }
+
+            /*         string[] Arry_tx = dhbzsbh.Split(new char[1] { ',' });
+
+                     if (Arry_tx.Length == 1)
+                     {
+                         struct_hwglb.p_dhbzs = dhbzsbh;
+                         try
+                         {
+                             hwglb.Insert__HWGLB(struct_hwglb);
+                             //Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"添加成功！\")</script>");
+                             ClientScript.RegisterStartupScript(this.GetType(), "", " <script lanuage=javascript> alert('添加成功');location.href='BS_HWGLB.aspx';</script>");
+                         }
+                         catch (EMException ex)
+                         {
+                             Response.Write(EMException.ShowErrorScript(ex));
+                             return;
+                         }
+                     }
+                     else
+                     {
+                         int i = Arry_tx.Length;
+                         for (int ry = 0; ry < i; ry++)
+                         {
+                             struct_hwglb.p_dhbzs = Arry_tx[ry].ToString();
+                             try
+                             {
+                                 //DataTable ygpx = ChangeTable(struct_pxjl);
+                                 hwglb.Insert__HWGLB(struct_hwglb);
+                                 Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"添加成功！\")</script>");
+                             }
+                             catch (Exception em)
+                             {
+                                 throw em;
+                             }
+
+                         }
+
+                     }*/
         }
 
         protected void btn_fh_Click(object sender, EventArgs e)
@@ -197,8 +207,8 @@ namespace CUST.WKG
             else
             {
                 dhbzs_cs = dhbzs + "," + ddlt_dhbzs.SelectedValue.ToString();
-                string[] Arry_pxry = dhbzs_cs.Split(new char[1] { ',' });
-                if (IsRepeat2(Arry_pxry) == true)
+                string[] Arry_dhbzs = dhbzs_cs.Split(new char[1] { ',' });
+                if (IsRepeat2(Arry_dhbzs) == true)
                 {
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "提示", "<script>alert(\"已添加此值班人员，不能重复添加！\")</script>");
                     return;
@@ -206,7 +216,7 @@ namespace CUST.WKG
                 else
                 {
                     tbx_dhbzs.Text = tbx_dhbzs.Text.ToString() + "," + ddlt_dhbzs.SelectedItem.Text;
-                    dhbzsbh = dhbzs + "," + ddlt_dhbzs.SelectedValue.ToString();
+                    dhbzsbh = dhbzsbh + "," + ddlt_dhbzs.SelectedValue.ToString();
                 }
             }
         }
